@@ -87,6 +87,7 @@ body {
     width: auto; /* Make sure it adapts to the text size */
     height: 2.5rem; /* Fixed height to prevent layout shift */
     line-height: 2.5rem; /* Align the text vertically */
+    font-size: 27px;
 }
 
 .typewriter {
@@ -1751,6 +1752,8 @@ html[dir="rtl"] .timeline-list li::before {
     }
 }
 
+
+
 @media (max-width: 480px) {
     .social-link {
         width: 35px;
@@ -1760,5 +1763,13 @@ html[dir="rtl"] .timeline-list li::before {
 
     .contact-form {
         padding: 20px;
+    }
+
+    .hero-title {
+        text-align: left;
+    }
+    .hero-text {
+        text-align: justify;
+        padding-right: 10px;
     }
 }
