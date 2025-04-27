@@ -46,6 +46,12 @@
     -webkit-text-fill-color: transparent;
 }
 
+body, html {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+
 
 html {
     scroll-behavior: smooth;
@@ -802,22 +808,21 @@ input:checked + .slider:before {
     margin-bottom: 5px;
 }
 
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-    .timeline::before {
-        left: 20px;
+@media (max-width: 576px) {
+    .container {
+        padding: 0 15px;
+        max-width: 100%;
+        overflow-x: hidden;
     }
 
-    .timeline-item {
-        width: 100%;
-        padding-left: 40px;
-        text-align: left;
-    }
-
-    .timeline-item::before {
-        left: 20px;
+    .portfolio-grid,
+    .gallery-grid,
+    .certifications-grid,
+    .footer-content {
+        grid-template-columns: 1fr;
     }
 }
+
 
 /* ===== Portfolio Section ===== */
 .portfolio {
@@ -1368,7 +1373,8 @@ input:checked + .slider:before {
         top: 0;
         right: -100%;
         width: 100%;
-        max-width: 300px;
+        width: 80%; /* instead of 100% */
+        max-width: 250px;
         height: 100vh;
         background-color: var(--white);
         flex-direction: column;
@@ -1583,6 +1589,15 @@ html[dir="rtl"] .timeline-list li::before {
     right: -20px;
     left: auto;
 }
+
+@media (max-width: 576px) {
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
 
 /* Responsive Styles */
 @media (max-width: 768px) {
