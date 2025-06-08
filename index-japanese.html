@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muhammad Kamran | Web Developer</title>
+    <title>ムハンマド・カムラン | ウェブ開発者</title>
     <link rel="icon" href="gallary/web.png" type="image/svg+xml">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -24,88 +24,93 @@
             }, 500);
         }
     </script>
-    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-    <style>
-      /* Language Switcher */
-.language-switcher {
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
-  z-index: 9999;
-}
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> -->
+    <!-- <style>
+        /* Language Switcher */
+        .language-switcher {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 9999;
+        }
 
-#translate-button {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 16px;
-  background: white;
-  border: none;
-  border-radius: 30px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
-  cursor: pointer;
-  font-weight: 500;
-  transition: all 0.3s ease;
-}
+        #translate-button {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: white;
+            border: none;
+            border-radius: 30px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
 
-#translate-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
+        #translate-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
 
-#current-flag {
-  width: 20px;
-  height: 15px;
-  object-fit: cover;
-  border-radius: 2px;
-}
+        #current-flag {
+            width: 20px;
+            height: 15px;
+            object-fit: cover;
+            border-radius: 2px;
+        }
 
-/* Mobile responsive */
-@media (max-width: 768px) {
-  .language-switcher {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-}
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+            .language-switcher {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
 
-/* Google Translate adjustments */
-.goog-te-banner-frame {
-  display: none !important;
-}
+        /* Google Translate adjustments */
+        .goog-te-banner-frame {
+            display: none !important;
+        }
 
-body {
-  top: 0 !important;
-}
+        body {
+            top: 0 !important;
+        }
 
-/* Fix for translated content layout */
-[lang="ja"] {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 
-               "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
-}
+        /* Fix for translated content layout */
+        [lang="ja"] {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+        }
     </style> -->
 
 </head>
 
 <body>
 
-   
+    <!-- hidden off-screen, but still in the DOM -->
+    <div id="google_translate_element" style="position:absolute; left:-9999px; top:0; visibility:hidden;"></div>
+
+    <!-- Particles Container -->
+    <div id="tsparticles"></div>
 
     <!-- Header -->
+    <!-- Header (Japanese Version with Katakana name) -->
     <header class="header">
         <div class="container">
             <div class="logo">
-                <span class="logo-text text-gradient">Muhammad Kamran</span>
+                <span class="logo-text text-gradient">カムラン・ムハンマド</span>
                 <span class="logo-dot">.</span>
             </div>
             <nav class="nav">
                 <ul class="nav-list">
-                    <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
-                    <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
-                    <li class="nav-item"><a href="#timeline-section" class="nav-link">Education</a></li>
-                    <li class="nav-item"><a href="#certifications" class="nav-link">Certifications</a></li>
-                    <li class="nav-item"><a href="#portfolio" class="nav-link">Portfolio</a></li>
-                    <li class="nav-item"><a href="#gallery" class="nav-link">Gallery</a></li>
-                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                    <li class="nav-item"><a href="#home" class="nav-link active">ホーム</a></li>
+                    <li class="nav-item"><a href="#skills" class="nav-link">スキル</a></li>
+                    <li class="nav-item"><a href="#timeline-section" class="nav-link">学歴・職歴</a></li>
+                    <li class="nav-item"><a href="#certifications" class="nav-link">認定資格</a></li>
+                    <li class="nav-item"><a href="#portfolio" class="nav-link">ポートフォリオ</a></li>
+                    <li class="nav-item"><a href="#gallery" class="nav-link">ギャラリー</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">お問い合わせ</a></li>
                 </ul>
                 <div class="hamburger">
                     <span class="bar"></span>
@@ -113,10 +118,9 @@ body {
                     <span class="bar"></span>
                 </div>
             </nav>
-
-
         </div>
     </header>
+
 
 
 
@@ -128,29 +132,27 @@ body {
         <div class="container">
             <div class="hero-content">
                 <h1 class="hero-title animate">
-                    Hi, I'm <span class="text-gradient">Muhammad Kamran</span>
+                    はじめまして、<span class="text-gradient">カムラン・ムハンマド</span> と申します。
                 </h1>
                 <h2 class="hero-subtitle animate">
-                    <span class="typewriter-container">
-                        <span class="typewriter" data-words='["Full Stack Engineer", "Expat Living in Japan"]'></span>
-                    </span>
+                    <span class="typewriter" data-words='["フルスタックエンジニア", "日本在住の外国人"]'></span>
                 </h2>
 
-                <p></p>
-                <p class="hero-text animate">This is Muhammad Kamran. I am from Pakistan. I have worked as a software
-                    engineer back in my country.
-                    I have worked with numerous web technologies. PHP Laravel, JavaScript, WordPress, Shopify and React are the my core skills. I have helped clients around the world grow their businesses by building and optimizing their online presence.
+                <p class="hero-text animate">
+                    私はパキスタン出身のカムラン・ムハンマドです。母国ではソフトウェアエンジニアとして勤務しておりました。
+                    PHP、Laravel、JavaScript、WordPress、Shopify、React など、幅広いウェブ技術を用いて世界中のクライアントのビジネス成長をサポートしてきました。
                 </p>
-                <p class="hero-text animate">Currently, I am doing Masters in Applied Information Systems in Japan. My
-                    area of research is <span class="text-gradient"><u>Traffic Simulations and Psychology</u></span> .
-                    This research outlines the behaviors of drivers in Traffic
-                    envoirnment and how to reduce number of accidents in real world.
+
+                <p class="hero-text animate">
+                    現在は日本で応用情報システムの修士課程に在籍しております。<span class="text-gradient"><u>交通シミュレーションと心理学</u></span> に関する研究を行っており、
+                    運転者の行動を分析し、現実世界における交通事故の減少に貢献することを目指しています。
                 </p>
+
                 <div class="hero-buttons animate">
-                    <a href="#portfolio" class="btn btn-primary">View My Work</a>
-                    <a href="Kamran-cv-japanese.pdf" target="_blank" class="btn btn-primary">Download CV</a>
-                    <!-- <a href="#contact" class="btn btn-secondary">Hire Me</a> -->
+                    <a href="#portfolio" class="btn btn-primary">制作実績を見る</a>
+                    <a href="Kamran-cv-japanese.pdf" target="_blank" class="btn btn-primary">履歴書をダウンロード</a>
                 </div>
+
             </div>
             <div class="hero-image animate">
                 <div class="image-wrapper">
@@ -168,8 +170,8 @@ body {
     <!-- Skills Section -->
     <section id="skills" class="skills">
         <div class="container">
-            <h2 class="section-title animate text-gradient"><span>My Skills</span></h2>
-            <p class="section-subtitle animate">Technologies & Tools I Master</p>
+            <h2 class="section-title animate text-gradient"><span>スキル一覧</span></h2>
+            <p class="section-subtitle animate">習得している技術とツール</p>
 
             <div class="skills-categories">
                 <!-- Web Development -->
@@ -178,7 +180,7 @@ body {
                         <div class="category-icon">
                             <i class="fas fa-code"></i>
                         </div>
-                        <h3>Web Development</h3>
+                        <h3>ウェブ開発</h3>
                     </div>
                     <div class="skills-grid">
                         <div class="skill-card">
@@ -186,7 +188,7 @@ body {
                                 <i class="fab fa-wordpress"></i>
                             </div>
                             <div class="skill-info">
-                                <h4>WordPress</h4>
+                                <h4>WordPress（ワードプレス）</h4>
                                 <div class="skill-bar">
                                     <div class="skill-progress" data-width="90%"></div>
                                 </div>
@@ -222,7 +224,7 @@ body {
                                 <i class="fab fa-js"></i>
                             </div>
                             <div class="skill-info">
-                                <h4>JavaScript</h4>
+                                <h4>JavaScript（ジャバスクリプト）</h4>
                                 <div class="skill-bar">
                                     <div class="skill-progress" data-width="85%"></div>
                                 </div>
@@ -234,7 +236,7 @@ body {
                                 <i class="fab fa-bootstrap"></i>
                             </div>
                             <div class="skill-info">
-                                <h4>Bootstrap</h4>
+                                <h4>Bootstrap（ブートストラップ）</h4>
                                 <div class="skill-bar">
                                     <div class="skill-progress" data-width="88%"></div>
                                 </div>
@@ -246,7 +248,7 @@ body {
                                 <i class="fab fa-css3-alt"></i> <!-- You can customize the icon if needed -->
                             </div>
                             <div class="skill-info">
-                                <h4>Tailwind CSS</h4>
+                                <h4>Tailwind CSS（テイルウィンドCSS）</h4>
                                 <div class="skill-bar">
                                     <div class="skill-progress" data-width="85%"></div>
                                 </div>
@@ -258,7 +260,7 @@ body {
                                 <i class="fas fa-cube"></i> <!-- Placeholder icon for Unity -->
                             </div>
                             <div class="skill-info">
-                                <h4>Unity</h4>
+                                <h4>Unity（ユニティ）</h4>
                                 <div class="skill-bar">
                                     <div class="skill-progress" data-width="20%"></div>
                                 </div>
@@ -270,7 +272,7 @@ body {
                                 <i class="fas fa-gamepad"></i> <!-- Placeholder icon for Unreal Engine -->
                             </div>
                             <div class="skill-info">
-                                <h4>Unreal Engine</h4>
+                                <h4>Unreal Engine（アンリアルエンジン）</h4>
                                 <div class="skill-bar">
                                     <div class="skill-progress" data-width="15%"></div>
                                 </div>
@@ -285,7 +287,7 @@ body {
                                 <i class="fab fa-shopify"></i>
                             </div>
                             <div class="skill-info">
-                                <h4>Shopify</h4>
+                                <h4>Shopify（ショッピファイ）</h4>
                                 <div class="skill-bar">
                                     <div class="skill-progress" data-width="90%"></div>
                                 </div>
@@ -299,7 +301,7 @@ body {
                                 <i class="fab fa-react"></i>
                             </div>
                             <div class="skill-info">
-                                <h4>React</h4>
+                                <h4>React（リアクト）</h4>
                                 <div class="skill-bar">
                                     <div class="skill-progress" data-width="80%"></div>
                                 </div>
@@ -312,7 +314,7 @@ body {
                                 <i class="fab fa-laravel"></i>
                             </div>
                             <div class="skill-info">
-                                <h4>Laravel</h4>
+                                <h4>Laravel（ララベル）</h4>
                                 <div class="skill-bar">
                                     <div class="skill-progress" data-width="78%"></div>
                                 </div>
@@ -336,7 +338,7 @@ body {
                                 <i class="fas fa-database"></i>
                             </div>
                             <div class="skill-info">
-                                <h4>Database</h4>
+                                <h4>Database データベース</h4>
                                 <div class="skill-bar">
                                     <div class="skill-progress" data-width="82%"></div>
                                 </div>
@@ -351,7 +353,7 @@ body {
                         <div class="category-icon">
                             <i class="fas fa-chart-line"></i>
                         </div>
-                        <h3>Data Analysis</h3>
+                        <h3>データ分析</h3>
                     </div>
                     <div class="skills-grid">
                         <div class="skill-card">
@@ -359,7 +361,7 @@ body {
                                 <i class="fab fa-python"></i>
                             </div>
                             <div class="skill-info">
-                                <h4>Python</h4>
+                                <h4>Python（パイソン）</h4>
                                 <div class="skill-bar">
                                     <div class="skill-progress" data-width="85%"></div>
                                 </div>
@@ -384,7 +386,7 @@ body {
                                 <i class="fas fa-file-excel"></i>
                             </div>
                             <div class="skill-info">
-                                <h4>Excel</h4>
+                                <h4>Excel（エクセル）</h4>
                                 <div class="skill-bar">
                                     <div class="skill-progress" data-width="90%"></div>
                                 </div>
@@ -396,7 +398,7 @@ body {
                                 <img src="https://img.icons8.com/color/48/000000/power-bi.png" alt="Power BI">
                             </div>
                             <div class="skill-info">
-                                <h4>PowerBI</h4>
+                                <h4>Power BI（パワー・ビーアイ）</h4>
                                 <div class="skill-bar">
                                     <div class="skill-progress" data-width="75%"></div>
                                 </div>
@@ -411,7 +413,7 @@ body {
                         <div class="category-icon">
                             <i class="fas fa-tools"></i>
                         </div>
-                        <h3>Other Skills</h3>
+                        <h3>Other Skills - その他のスキル</h3>
                     </div>
                     <div class="skills-grid">
                         <!-- Video Editing (CapCut) -->
@@ -420,7 +422,7 @@ body {
                                 <i class="fas fa-video"></i>
                             </div>
                             <div class="skill-info">
-                                <h4>Video Editing (CapCut)</h4>
+                                <h4>動画編集（CapCut）</h4>
                                 <div class="skill-bar">
                                     <div class="skill-progress" data-width="85%"></div>
                                 </div>
@@ -433,7 +435,7 @@ body {
                                 <i class="fas fa-palette"></i>
                             </div>
                             <div class="skill-info">
-                                <h4>Graphic Design (Canva)</h4>
+                                <h4>グラフィックデザイン（Canva）</h4>
                                 <div class="skill-bar">
                                     <div class="skill-progress" data-width="90%"></div>
                                 </div>
@@ -446,7 +448,7 @@ body {
                                 <i class="fas fa-file-word"></i>
                             </div>
                             <div class="skill-info">
-                                <h4>MS Office</h4>
+                                <h4>Microsoft Office（マイクロソフトオフィス）</h4>
                                 <div class="skill-bar">
                                     <div class="skill-progress" data-width="95%"></div>
                                 </div>
@@ -459,7 +461,7 @@ body {
                                 <i class="fas fa-comments"></i>
                             </div>
                             <div class="skill-info">
-                                <h4>Communication</h4>
+                                <h4>Communication - コミュニケーションスキル</h4>
                                 <div class="skill-bar">
                                     <div class="skill-progress" data-width="90%"></div>
                                 </div>
@@ -472,7 +474,7 @@ body {
                                 <i class="fas fa-chalkboard-teacher"></i>
                             </div>
                             <div class="skill-info">
-                                <h4>Teaching</h4>
+                                <h4>教育指導</h4>
                                 <div class="skill-bar">
                                     <div class="skill-progress" data-width="80%"></div>
                                 </div>
@@ -485,7 +487,7 @@ body {
                                 <i class="fas fa-blog"></i>
                             </div>
                             <div class="skill-info">
-                                <h4>Blog Writing</h4>
+                                <h4>ブログ執筆</h4>
                                 <div class="skill-bar">
                                     <div class="skill-progress" data-width="85%"></div>
                                 </div>
@@ -501,26 +503,26 @@ body {
     <!-- Employment Section -->
     <section id="timeline-section" class="timeline-section">
         <div class="container">
-            <h2 class="section-title animate text-gradient"><span>Education & Experience</span></h2>
-            <p class="section-subtitle animate">Education & Professional Experience</p>
+            <h2 class="section-title animate text-gradient"><span>学歴・職歴</span></h2>
+            <p class="section-subtitle animate">教育背景と職務経験</p>
 
             <div class="timeline-grid">
                 <!-- Left Column (Education) -->
                 <div class="timeline-column education-column">
-                    <h3 class="column-title">Education</h3>
+                    <h3 class="column-title">学歴</h3>
 
                     <div class="timeline-card animate">
-                        <h4>Masters in Applied Information Systems</h4>
-                        <h5>University of Kitakyushu, Fukuoka, Japan</h5>
-                        <p>Focused on traffic simulations systems and Psychology</p>
-                        <span class="timeline-date">Oct 2024 - Sep 2026</span>
+                        <h4>応用情報システム 修士課程</h4>
+                        <h5>北九州市立大学（福岡、日本）</h5>
+                        <p>交通シミュレーションおよび心理学に関する研究に従事</p>
+                        <span class="timeline-date">2024年10月〜2026年9月</span>
                     </div>
 
                     <div class="timeline-card animate">
-                        <h4>Bachelor's in Information Technology</h4>
-                        <h5>University of Gujrat (GPGC), Jhelum</h5>
-                        <p>Focused on Full Stack Development & Software Architecture</p>
-                        <span class="timeline-date">Sep 2016 - Nov 2020</span>
+                        <h4>情報技術 学士課程</h4>
+                        <h5>グジャラート大学（GPGC）、ジェルム</h5>
+                        <p>フルスタック開発およびソフトウェアアーキテクチャに注力</p>
+                        <span class="timeline-date">2016年9月〜2020年11月</span>
                     </div>
 
 
@@ -528,32 +530,34 @@ body {
 
                 <!-- Right Column (Professional Experience) -->
                 <div class="timeline-column experience-column">
-                    <h3 class="column-title">Professional Experience</h3>
+                    <h3 class="column-title">職務経験</h3>
                     <div class="timeline-card animate">
-                        <h4>Full Time Freelancer </h4>
-                        <h5><u><a href="#" target="_blank">Remote Clients</a></u></h5>
-                        <p>Worked as Full Stack Egnineer. I mainly worked with PHP, JavaScript, Laravel, WordPress and Shopify etc. </p>
-                        <span class="timeline-date">Feb 2022 - Aug 2024</span>
+                        <h4>フルタイム フリーランスエンジニア</h4>
+                        <h5><u><a href="#" target="_blank">リモートクライアント</a></u></h5>
+                        <p>フルスタックエンジニアとして、PHP、JavaScript、Laravel、WordPress、Shopifyなどの技術を用いて開発業務を担当しました。</p>
+                        <span class="timeline-date">2022年2月〜2024年8月</span>
                         <div class="skills">
-                            <span class="timeline-date">PHP</span>
-                            <span class="timeline-date">JavaScript</span>
-                            <span class="timeline-date">CSS3</span>
-                            <span class="timeline-date">WordPress</span>
-                            <!-- <span class="timeline-date">Laravel</span> -->
+                            <span class="timeline-date">PHP (ピーエイチピー)</span>
+                            <span class="timeline-date">JavaScript (ジャバスクリプト)</span>
+                            <span class="timeline-date">CSS3 (シーエスエス3)</span>
+                            <span class="timeline-date">WordPress (ワードプレス)</span>
+                            <!-- <span class="timeline-date">Laravel (ララベル)</span> -->
                         </div>
+                        
                     </div>
                     <div class="timeline-card animate">
-                        <h4>Computer Teacher </h4>
-                        <h5><u>Computer City</u></h5>
-                        <p>Worked as Computer Teacher</p>
-                        <span class="timeline-date">Nov 2020 - Dec 2021</span>
+                        <h4>コンピュータ講師</h4>
+                        <h5><u>コンピューターシティ</u></h5>
+                        <p>基本的なITスキルとウェブ開発について指導</p>
+                        <span class="timeline-date">2020年11月〜2021年12月</span>
                         <div class="skills">
-                            <span class="timeline-date">Digital Marketing</span>
-                            <span class="timeline-date">Web Design and Development</span>
-                            <span class="timeline-date">Ecommerce</span>
-                            <span class="timeline-date">Video Editing</span>
+                            <span class="timeline-date">デジタルマーケティング</span>
+                            <span class="timeline-date">ウェブデザインと開発</span>
+                            <span class="timeline-date">Eコマース</span>
+                            <span class="timeline-date">ビデオ編集</span>
                             <!-- <span class="timeline-date">Laravel</span> -->
                         </div>
+                        
                     </div>
                 </div>
             </div>
@@ -738,406 +742,371 @@ body {
 
     <!-- Certifications Section -->
     <section id="certifications" class="certifications">
-        <div class="container">
-            <h2 class="section-title animate text-gradient"><span>My Certifications</span></h2>
-            <p class="section-subtitle animate">Professional credentials and achievements</p>
+        <!-- 認定資格セクション -->
+        <section id="certifications" class="certifications">
+            <div class="container">
+                <h2 class="section-title animate text-gradient"><span>私の認定資格</span></h2>
+                <p class="section-subtitle animate">専門的な資格と実績</p>
 
-            <div class="certifications-grid">
-                <div class="certification-card animate">
-                    <div class="certification-icon">
-                        <i class="fas fa-award"></i>
+                <div class="certifications-grid">
+                    <div class="certification-card animate">
+                        <div class="certification-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h3>Pythonによる科学計算</h3>
+                        <p>発行元：Freecodecamp ・ 2023年</p>
+                        <a target="_blank"
+                            href="https://www.freecodecamp.org/certification/mohammad_kamran/scientific-computing-with-python-v7"
+                            class="btn btn-small">資格を見る</a>
                     </div>
-                    <h3>Scientific Computing With Python</h3>
-                    <p>Issued by Freecodecamp • 2023</p>
-                    <a target="_blank"
-                        href="https://www.freecodecamp.org/certification/mohammad_kamran/scientific-computing-with-python-v7"
-                        class="btn btn-small">View Credential</a>
-                </div>
 
-                <div class="certification-card animate">
-                    <div class="certification-icon">
-                        <i class="fas fa-award"></i>
+                    <div class="certification-card animate">
+                        <div class="certification-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h3>Pythonによるデータ分析</h3>
+                        <p>発行元：Freecodecamp ・ 2023年</p>
+                        <a target="_blank"
+                            href="https://www.freecodecamp.org/certification/mohammad_kamran/data-analysis-with-python-v7"
+                            class="btn btn-small">資格を見る</a>
                     </div>
-                    <h3>Data Analysis With Python</h3>
-                    <p>Issued by Freecodecamp • 2023</p>
-                    <a target="_blank"
-                        href="https://www.freecodecamp.org/certification/mohammad_kamran/data-analysis-with-python-v7"
-                        class="btn btn-small">View Credential</a>
-                </div>
 
-                <div class="certification-card animate">
-                    <div class="certification-icon">
-                        <i class="fas fa-award"></i>
+                    <div class="certification-card animate">
+                        <div class="certification-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h3>Google デジタルマーケティング</h3>
+                        <p>発行元：Google ・ 2020年</p>
+                        <a target="_blank"
+                            href="https://www.linkedin.com/in/mokamran/details/certifications/1702541704516/single-media-viewer/?type=IMAGE&profileId=ACoAAC-pnmUBZNPYAO6bAepZAN1JRHtpe7qyTGM"
+                            class="btn btn-small">資格を見る</a>
                     </div>
-                    <h3>Google Digital Marketing</h3>
-                    <p>Issued by Google • 2020</p>
-                    <a target="_blank"
-                        href="https://www.linkedin.com/in/mokamran/details/certifications/1702541704516/single-media-viewer/?type=IMAGE&profileId=ACoAAC-pnmUBZNPYAO6bAepZAN1JRHtpe7qyTGM"
-                        class="btn btn-small">View Credential</a>
-                </div>
 
+                </div>
             </div>
-        </div>
+        </section>
+
     </section>
 
     <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio">
         <div class="container">
-            <h2 class="section-title animate text-gradient"><span>My Portfolio</span></h2>
-            <p class="section-subtitle animate">Selected projects I've worked on</p>
-
+            <h2 class="section-title animate text-gradient"><span>私のポートフォリオ</span></h2>
+            <p class="section-subtitle animate">これまでに手がけた代表的なプロジェクト</p>
+    
             <div class="portfolio-tabs animate">
-                <button class="tab-btn active" data-tab="all">All</button>
-                <button class="tab-btn" data-tab="web">Web Design</button>
-                <button class="tab-btn" data-tab="ecom">Ecommerce</button>
-                <button class="tab-btn" data-tab="other">Others</button>
+                <button class="tab-btn active" data-tab="all">すべて</button>
+                <button class="tab-btn" data-tab="web">ウェブデザイン</button>
+                <button class="tab-btn" data-tab="ecom">イーコマース</button>
+                <button class="tab-btn" data-tab="other">その他</button>
             </div>
-
+    
             <div class="portfolio-grid">
                 <div class="portfolio-item animate" data-category="web">
                     <div class="portfolio-image">
-                        <img src="portfolio/estores-experts.png" alt="E-commerce Website">
+                        <img src="portfolio/estores-experts.png" alt="Eコマースサイト">
                         <div class="portfolio-overlay">
-                            <h3>Expert Estores</h3>
-                            <p>Ecommerce Agency Website</p>
-                            <a target="_blank" href="https://www.estoresexperts.com" class="portfolio-link"><i
-                                    class="fas fa-external-link-alt"></i></a>
+                            <h3>エキスパート・エストアーズ</h3>
+                            <p>イーコマース代理店のウェブサイト</p>
+                            <a target="_blank" href="https://www.estoresexperts.com" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
                 </div>
+    
                 <div class="portfolio-item animate" data-category="ecom">
                     <div class="portfolio-image">
-                        <img src="portfolio/mosle.png" alt="E-commerce Website">
+                        <img src="portfolio/mosle.png" alt="イーコマースサイト">
                         <div class="portfolio-overlay">
-                            <h3>Mosle Inc</h3>
-                            <p>Ecommerce Website</p>
-                            <a target="_blank" href="https://mosleinc.com" class="portfolio-link"><i
-                                    class="fas fa-external-link-alt"></i></a>
+                            <h3>モスレ株式会社</h3>
+                            <p>イーコマースサイト</p>
+                            <a target="_blank" href="https://mosleinc.com" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
                 </div>
+    
                 <div class="portfolio-item animate" data-category="web">
                     <div class="portfolio-image">
-                        <img src="portfolio/advocate-raja.png" alt="E-commerce Website">
+                        <img src="portfolio/advocate-raja.png" alt="パーソナルサイト">
                         <div class="portfolio-overlay">
-                            <h3>Advocate Raja</h3>
-                            <p>Personal Website</p>
-                            <a target="_blank" href="https://advocateraja.com/" class="portfolio-link"><i
-                                    class="fas fa-external-link-alt"></i></a>
+                            <h3>アドボケイト・ラジャ</h3>
+                            <p>個人ウェブサイト</p>
+                            <a target="_blank" href="https://advocateraja.com/" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
                 </div>
-
+    
                 <div class="portfolio-item animate" data-category="web">
                     <div class="portfolio-image">
-                        <img src="portfolio/unique-links.png" alt="Task Management App">
+                        <img src="portfolio/unique-links.png" alt="ウェブホスティングサイト">
                         <div class="portfolio-overlay">
-                            <h3>Unique Links</h3>
-                            <p>Web Hosting Company Website</p>
-                            <a target="_blank" href="https://www.unique-links.com.pk/" class="portfolio-link"><i
-                                    class="fas fa-external-link-alt"></i></a>
+                            <h3>ユニークリンクス</h3>
+                            <p>ウェブホスティング会社のサイト</p>
+                            <a target="_blank" href="https://www.unique-links.com.pk/" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
                 </div>
-
+    
                 <div class="portfolio-item animate" data-category="ecom">
                     <div class="portfolio-image">
-                        <img src="portfolio/zoo-bounty.png" alt="Fitness App UI">
+                        <img src="portfolio/zoo-bounty.png" alt="オンラインショッピングサイト">
                         <div class="portfolio-overlay">
-                            <h3>Zoo Bounty</h3>
-                            <p>Online Shopping Website</p>
-                            <a target="_blank" href="https://zoo-bounty.com/" class="portfolio-link"><i
-                                    class="fas fa-external-link-alt"></i></a>
+                            <h3>ズー・バウンティ</h3>
+                            <p>オンラインショッピングサイト</p>
+                            <a target="_blank" href="https://zoo-bounty.com/" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
                 </div>
-
+    
                 <div class="portfolio-item animate" data-category="web">
                     <div class="portfolio-image">
-                        <img src="portfolio/huffaz-academy.png" alt="Corporate Website">
+                        <img src="portfolio/huffaz-academy.png" alt="コーポレートサイト">
                         <div class="portfolio-overlay">
-                            <h3>Huffaz Academy</h3>
-                            <p>Quran Classes Website</p>
-                            <a target="_blank" href="https://huffazacademy.com/" class="portfolio-link"><i
-                                    class="fas fa-external-link-alt"></i></a>
+                            <h3>フッファズ・アカデミー</h3>
+                            <p>クルアーン教室のウェブサイト</p>
+                            <a target="_blank" href="https://huffazacademy.com/" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
                 </div>
-
+    
                 <div class="portfolio-item animate" data-category="web">
                     <div class="portfolio-image">
-                        <img src="portfolio/swif-sol.png" alt="Weather Dashboard">
+                        <img src="portfolio/swif-sol.png" alt="デジタルマーケティング代理店サイト">
                         <div class="portfolio-overlay">
-                            <h3>Swif Sol</h3>
-                            <p>Digital Markering Agency Website</p>
-                            <a target="_blank" href="https://swifsol.com/" class="portfolio-link"><i
-                                    class="fas fa-external-link-alt"></i></a>
+                            <h3>スウィフ・ソル</h3>
+                            <p>デジタルマーケティング代理店のウェブサイト</p>
+                            <a target="_blank" href="https://swifsol.com/" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
                 </div>
-
+    
                 <div class="portfolio-item animate" data-category="web">
                     <div class="portfolio-image">
-                        <img src="portfolio/reblate-sols.png" alt="CRM">
+                        <img src="portfolio/reblate-sols.png" alt="CRMシステム">
                         <div class="portfolio-overlay">
-                            <h3>Company CRM Project</h3>
-                            <p>JavaScript + Laravel Web App</p>
-                            <a target="_blank" href="https://crm.reblatesols.com/login" class="portfolio-link"><i
-                                    class="fas fa-external-link-alt"></i></a>
+                            <h3>企業向けCRMプロジェクト</h3>
+                            <p>JavaScript + Laravelを使用したウェブアプリ</p>
+                            <a target="_blank" href="https://crm.reblatesols.com/login" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
                 </div>
-
+    
                 <div class="portfolio-item animate" data-category="other">
                     <div class="portfolio-image">
-                        <img src="portfolio/firex.png" alt="CRM">
+                        <img src="portfolio/firex.png" alt="Unityプロジェクト">
                         <div class="portfolio-overlay">
-                            <h3>Firex Unity Project</h3>
-                            <p>Unity and C# Final Yeal Project</p>
-                            <a target="_blank"
-                                href="https://www.linkedin.com/posts/mokamran_finalyearproject-indiegame-gamedevlife-activity-7143562652156420096-nOJh?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAC-pnmUBZNPYAO6bAepZAN1JRHtpe7qyTGM"
-                                class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
+                            <h3>ファイレックス・ユニティプロジェクト</h3>
+                            <p>UnityとC#による最終年度プロジェクト</p>
+                            <a target="_blank" href="https://www.linkedin.com/posts/mokamran_finalyearproject-indiegame-gamedevlife-activity-7143562652156420096-nOJh?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAC-pnmUBZNPYAO6bAepZAN1JRHtpe7qyTGM" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
                 </div>
-
-                <!-- <div class="portfolio-item animate" data-category="other">
-                    <div class="portfolio-image">
-                        <img src="portfolio/data-analysis.jpeg" alt="Data Analystics">
-                        <div class="portfolio-overlay">
-                            <h3>Sample Data analytics</h3>
-                            <p>Excel</p>
-                            <a target="_blank"
-                                href="https://www.linkedin.com/posts/mokamran_dataanalysis-excel-dashboard-activity-7305608912194437120-xuis?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAC-pnmUBZNPYAO6bAepZAN1JRHtpe7qyTGM"
-                                class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
-                        </div>
-                    </div>
-                </div> -->
             </div>
         </div>
     </section>
+    
+
+
 
     <!-- Gallery Section -->
     <section id="gallery" class="gallery">
         <div class="container">
-            <h2 class="section-title animate text-gradient"><span>Image Gallery</span></h2>
-            <p class="section-subtitle animate">Exploring the world for inspiration</p>
-
+            <h2 class="section-title animate text-gradient"><span>イメージギャラリー</span></h2>
+            <p class="section-subtitle animate">インスピレーションを求めて世界を探索</p>
+    
             <div class="gallery-grid">
                 <div class="gallery-item animate">
-                    <img src="gallary/cat-island.jpg" alt="Mountain Landscape">
+                    <img src="gallary/cat-island.jpg" alt="猫島の風景">
                     <div class="gallery-overlay">
-                        <h3>Cat Island, Japan</h3>
+                        <h3>猫島（日本）</h3>
                     </div>
                 </div>
-
+    
                 <div class="gallery-item animate">
-                    <img src="gallary/flower.jpg" alt="Beach Sunset">
+                    <img src="gallary/flower.jpg" alt="花祭り">
                     <div class="gallery-overlay">
-                        <h3>Flower Festival</h3>
-                        <!-- <p>Sunset at Seminyak Beach</p> -->
+                        <h3>花祭り</h3>
                     </div>
                 </div>
-
+    
                 <div class="gallery-item animate">
-                    <img src="gallary/freinds-2.jpg" alt="City Skyline">
+                    <img src="gallary/freinds-2.jpg" alt="友達との外出">
                     <div class="gallery-overlay">
-                        <h3>Friends Outside</h3>
-                        <!-- <p>View from Brooklyn Bridge</p> -->
+                        <h3>友達との外出</h3>
                     </div>
                 </div>
-
+    
                 <div class="gallery-item animate">
-                    <img src="gallary/friends.jpg" alt="City Skyline">
+                    <img src="gallary/friends.jpg" alt="友達との外出">
                     <div class="gallery-overlay">
-                        <h3>Friends Outside</h3>
-                        <!-- <p>View from Brooklyn Bridge</p> -->
+                        <h3>友達との外出</h3>
                     </div>
                 </div>
-
+    
                 <div class="gallery-item animate">
-                    <img src="gallary/fukuoka-2.jpg" alt="City Skyline">
+                    <img src="gallary/fukuoka-2.jpg" alt="福岡の景色">
                     <div class="gallery-overlay">
-                        <h3>Fukuoka</h3>
-                        <!-- <p>View from Brooklyn Bridge</p> -->
+                        <h3>福岡</h3>
                     </div>
                 </div>
                 <div class="gallery-item animate">
-                    <img src="gallary/fukuoka-temple.jpg" alt="City Skyline">
+                    <img src="gallary/fukuoka-temple.jpg" alt="福岡の神社">
                     <div class="gallery-overlay">
-                        <h3>Fukuoka Shrine</h3>
-                        <!-- <p>View from Brooklyn Bridge</p> -->
+                        <h3>福岡の神社</h3>
                     </div>
                 </div>
                 <div class="gallery-item animate">
-                    <img src="gallary/japan-science.jpg" alt="City Skyline">
+                    <img src="gallary/japan-science.jpg" alt="日本科学博物館">
                     <div class="gallery-overlay">
-                        <h3>Japan Science Museum</h3>
-                        <!-- <p>View from Brooklyn Bridge</p> -->
+                        <h3>日本科学博物館</h3>
                     </div>
                 </div>
                 <div class="gallery-item animate">
-                    <img src="gallary/japan-village.jpg" alt="City Skyline">
+                    <img src="gallary/japan-village.jpg" alt="日本の村">
                     <div class="gallery-overlay">
-                        <h3>Japan Village</h3>
-                        <!-- <p>View from Brooklyn Bridge</p> -->
+                        <h3>日本の村</h3>
                     </div>
                 </div>
                 <div class="gallery-item animate">
-                    <img src="gallary/japan.jpg" alt="City Skyline">
+                    <img src="gallary/japan.jpg" alt="日本の風景">
                     <div class="gallery-overlay">
-                        <h3>Japan</h3>
-                        <!-- <p>View from Brooklyn Bridge</p> -->
+                        <h3>日本</h3>
                     </div>
                 </div>
                 <div class="gallery-item animate">
-                    <img src="gallary/onga.jpg" alt="City Skyline">
+                    <img src="gallary/onga.jpg" alt="遠賀川（日本）">
                     <div class="gallery-overlay">
-                        <h3>Onga River Japan</h3>
-                        <!-- <p>View from Brooklyn Bridge</p> -->
+                        <h3>遠賀川（日本）</h3>
                     </div>
                 </div>
                 <div class="gallery-item animate">
-                    <img src="gallary/sea-2.jpg" alt="City Skyline">
+                    <img src="gallary/sea-2.jpg" alt="日本の海">
                     <div class="gallery-overlay">
-                        <h3>Sea in Japan</h3>
-                        <!-- <p>View from Brooklyn Bridge</p> -->
+                        <h3>日本の海</h3>
                     </div>
                 </div>
                 <div class="gallery-item animate">
-                    <img src="gallary/sea.jpg" alt="City Skyline">
+                    <img src="gallary/sea.jpg" alt="日本の海">
                     <div class="gallery-overlay">
-                        <h3>Sea in Japan</h3>
-                        <!-- <p>View from Brooklyn Bridge</p> -->
+                        <h3>日本の海</h3>
                     </div>
                 </div>
                 <div class="gallery-item animate">
-                    <img src="gallary/sea-3.jpg" alt="City Skyline">
+                    <img src="gallary/sea-3.jpg" alt="日本の海">
                     <div class="gallery-overlay">
-                        <h3>Sea in Japan</h3>
-                        <!-- <p>View from Brooklyn Bridge</p> -->
+                        <h3>日本の海</h3>
                     </div>
                 </div>
                 <div class="gallery-item animate">
-                    <img src="gallary/tokyo.jpg" alt="City Skyline">
+                    <img src="gallary/tokyo.jpg" alt="東京の風景">
                     <div class="gallery-overlay">
-                        <h3>Tokyo</h3>
-                        <!-- <p>View from Brooklyn Bridge</p> -->
+                        <h3>東京</h3>
                     </div>
                 </div>
                 <div class="gallery-item animate">
-                    <img src="gallary/tokyo.jpg" alt="City Skyline">
+                    <img src="gallary/tokyo.jpg" alt="東京の風景">
                     <div class="gallery-overlay">
-                        <h3>Tokyo</h3>
-                        <!-- <p>View from Brooklyn Bridge</p> -->
+                        <h3>東京</h3>
                     </div>
                 </div>
                 <div class="gallery-item animate">
-                    <img src="gallary/tokyo-2.jpg" alt="City Skyline">
+                    <img src="gallary/tokyo-2.jpg" alt="東京の風景">
                     <div class="gallery-overlay">
-                        <h3>Tokyo</h3>
-                        <!-- <p>View from Brooklyn Bridge</p> -->
+                        <h3>東京</h3>
                     </div>
                 </div>
                 <div class="gallery-item animate">
-                    <img src="gallary/tokyo-3.jpg" alt="City Skyline">
+                    <img src="gallary/tokyo-3.jpg" alt="東京の風景">
                     <div class="gallery-overlay">
-                        <h3>Tokyo</h3>
-                        <!-- <p>View from Brooklyn Bridge</p> -->
+                        <h3>東京</h3>
                     </div>
                 </div>
                 <div class="gallery-item animate">
-                    <img src="gallary/tokyo-match.jpg" alt="City Skyline">
+                    <img src="gallary/tokyo-match.jpg" alt="東京サッカーの試合">
                     <div class="gallery-overlay">
-                        <h3>Tokyo Soccer Match</h3>
-                        <!-- <p>View from Brooklyn Bridge</p> -->
+                        <h3>東京サッカーの試合</h3>
                     </div>
                 </div>
                 <div class="gallery-item animate">
-                    <img src="gallary/ukk-uni.jpg" alt="City Skyline">
+                    <img src="gallary/ukk-uni.jpg" alt="北九州市立大学">
                     <div class="gallery-overlay">
-                        <h3>University of Kitakyushu</h3>
-                        <!-- <p>View from Brooklyn Bridge</p> -->
+                        <h3>北九州市立大学</h3>
                     </div>
                 </div>
                 <div class="gallery-item animate">
-                    <img src="gallary/ukk-2.jpg" alt="City Skyline">
+                    <img src="gallary/ukk-2.jpg" alt="北九州市立大学">
                     <div class="gallery-overlay">
-                        <h3>University of Kitakyushu</h3>
-                        <!-- <p>View from Brooklyn Bridge</p> -->
+                        <h3>北九州市立大学</h3>
                     </div>
                 </div>
                 <div class="gallery-item animate">
-                    <img src="gallary/ukk-3.jpg" alt="City Skyline">
+                    <img src="gallary/ukk-3.jpg" alt="北九州市立大学">
                     <div class="gallery-overlay">
-                        <h3>University of Kitakyushu</h3>
-                        <!-- <p>View from Brooklyn Bridge</p> -->
+                        <h3>北九州市立大学</h3>
                     </div>
                 </div>
-
-
             </div>
         </div>
     </section>
+    
 
     <!-- language change button  -->
     <div class="language-buttons">
-        <!-- <a href="/en">
+        <a href="index.html">
           <img src="https://flagcdn.com/us.svg" alt="US Flag"> English
-        </a> -->
-        <a href="index-japanese.html">
-          <img src="https://flagcdn.com/jp.svg" alt="Japan Flag"> 日本語
         </a>
-      </div>
-      
-      <style>
+        <!-- <a href="/jp">
+            <img src="https://flagcdn.com/jp.svg" alt="Japan Flag"> 日本語
+        </a> -->
+    </div>
+
+    <style>
         .language-buttons {
-          position: fixed;
-          bottom: 20px;
-          left: 50%;
-          transform: translateX(-50%);
-          display: flex;
-          gap: 15px;
-          z-index: 1000;
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 15px;
+            z-index: 1000;
         }
-      
+
         .language-buttons a {
-          display: flex;
-          align-items: center;
-          gap: 8px;
-          background: #f9f9f9;
-          color: #333;
-          text-decoration: none;
-          padding: 10px 18px;
-          border-radius: 25px;
-          font-weight: bold;
-          border: 1px solid #ccc;
-          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-          transition: background 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: #f9f9f9;
+            color: #333;
+            text-decoration: none;
+            padding: 10px 18px;
+            border-radius: 25px;
+            font-weight: bold;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+            transition: background 0.2s;
         }
-      
+
         .language-buttons a:hover {
-          background: #eaeaea;
+            background: #eaeaea;
         }
-      
+
         .language-buttons img {
-          width: 24px;
-          height: 16px;
-          border: 1px solid #ccc;
-          border-radius: 3px;
+            width: 24px;
+            height: 16px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
         }
-      </style>
-      
-      
+    </style>
+
+
 
 
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title animate text-gradient"><span>Get in Touch</span></h2>
-            <p class="section-subtitle animate">Let's work together!</p>
-
+            <h2 class="section-title animate text-gradient"><span>お問い合わせ</span></h2>
+            <p class="section-subtitle animate">一緒にお仕事しましょう！</p>
+    
             <div class="contact-content">
                 <div class="contact-info animate">
                     <div class="contact-item">
@@ -1145,31 +1114,31 @@ body {
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
                         <div class="contact-text">
-                            <h3>Location</h3>
-                            <p>Fukuoka, Japan</p>
+                            <h3>所在地</h3>
+                            <p>福岡、日本</p>
                         </div>
                     </div>
-
+    
                     <div class="contact-item">
                         <div class="contact-icon">
                             <i class="fas fa-envelope"></i>
                         </div>
                         <div class="contact-text">
-                            <h3>Email</h3>
+                            <h3>メール</h3>
                             <p>mohammadkamran1515@gmail.com</p>
                         </div>
                     </div>
-
+    
                     <div class="contact-item">
                         <div class="contact-icon">
                             <i class="fas fa-phone"></i>
                         </div>
                         <div class="contact-text">
-                            <h3>Phone</h3>
-                            <p>Coming Soon</p>
+                            <h3>電話番号</h3>
+                            <p>近日公開予定</p>
                         </div>
                     </div>
-
+    
                     <div class="contact-social">
                         <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
                         <a href="https://x.com/being_m_kamran" target="_blank" class="social-link"><i
@@ -1186,24 +1155,24 @@ body {
                                 class="fab fa-tiktok"></i></a>
                     </div>
                 </div>
-
+    
                 <!-- Alternative for Contact Form -->
                 <div class="contact-form animate"
                     style="background-color: rgba(255,255,255,0.9); border-radius:10px; padding:30px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align:center;">
-                    <h3 style="margin-bottom:20px;">I'm open for collaborations, projects, and discussions!</h3>
-                    <p style="margin-bottom:30px; color: var(--gray-color);">Feel free to reach out via email. Let's
-                        build something amazing together!</p>
-                    <a href="mailto:mohammadkamran1515@gmail.com" class="btn btn-primary">Email Me</a>
+                    <h3 style="margin-bottom:20px;">コラボレーション、プロジェクト、ディスカッションを歓迎します！</h3>
+                    <p style="margin-bottom:30px; color: var(--gray-color);">メールでお気軽にご連絡ください。一緒に素晴らしいものを作りましょう！</p>
+                    <a href="mailto:mohammadkamran1515@gmail.com" class="btn btn-primary">メールを送る</a>
                 </div>
-
+    
             </div>
         </div>
     </section>
+    
 
     <!-- Google Translate Element (hidden) -->
     <div id="google_translate_element" style="display:none;"></div>
 
- 
+
 
 
 
@@ -1214,59 +1183,59 @@ body {
             <div class="footer-content">
                 <div class="footer-about">
                     <div class="logo">
-                        <span class="logo-text text-gradient">Muhammad Kamran</span>
+                        <span class="logo-text text-gradient">ムハンマド・カムラン</span>
                         <span class="logo-dot">.</span>
                     </div>
-                    <p>An Experienced Web Developer and Lifetime Learner</p>
+                    <p>経験豊富なウェブ開発者で、生涯学習者です</p>
                 </div>
-
+    
                 <div class="footer-links">
-                    <h3>Quick Links</h3>
+                    <h3>クイックリンク</h3>
                     <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#timeline-section">Education</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#home">ホーム</a></li>
+                        <li><a href="#timeline-section">学歴</a></li>
+                        <li><a href="#skills">スキル</a></li>
+                        <li><a href="#portfolio">ポートフォリオ</a></li>
+                        <li><a href="#contact">お問い合わせ</a></li>
                     </ul>
                 </div>
-
+    
                 <div class="footer-links">
-                    <h3>Services</h3>
+                    <h3>サービス</h3>
                     <ul>
-                        <li><a href="#">Web Design & Development</a></li>
-                        <!-- <li><a href="#">Web Design</a></li> -->
-                        <li><a href="#">Ecommerce Development</a></li>
-                        <li><a href="#">Landing Pages</a></li>
-                        <!-- <li><a href="#">WordPress Development</a></li> -->
-                        <!-- <li><a href="#">Portfolio Websites</a></li> -->
-                        <li><a href="#">Business Websites</a></li>
-                        <li><a href="#">Website Maintenance</a></li>
-                        <!-- <li><a href="#">Speed Optimization</a></li> -->
-                        <li><a href="#">API Integration</a></li>
-                        <!-- <li><a href="#">Server Management</a></li> -->
+                        <li><a href="#">ウェブデザイン＆開発</a></li>
+                        <!-- <li><a href="#">ウェブデザイン</a></li> -->
+                        <li><a href="#">Eコマース開発</a></li>
+                        <li><a href="#">ランディングページ</a></li>
+                        <!-- <li><a href="#">ワードプレス開発</a></li> -->
+                        <!-- <li><a href="#">ポートフォリオウェブサイト</a></li> -->
+                        <li><a href="#">ビジネスウェブサイト</a></li>
+                        <li><a href="#">ウェブサイトメンテナンス</a></li>
+                        <!-- <li><a href="#">スピード最適化</a></li> -->
+                        <li><a href="#">API統合</a></li>
+                        <!-- <li><a href="#">サーバー管理</a></li> -->
                     </ul>
                 </div>
-
+    
                 <div class="footer-newsletter">
-                    <h3>Newsletter</h3>
-                    <p>Subscribe to get updates on my latest projects.</p>
+                    <h3>ニュースレター</h3>
+                    <p>最新プロジェクトの情報を受け取るためにご登録ください。</p>
                     <form class="newsletter-form">
-                        <input type="email" placeholder="Your Email">
+                        <input type="email" placeholder="メールアドレス">
                         <button type="submit"><i class="fas fa-paper-plane"></i></button>
                     </form>
                 </div>
             </div>
-
+    
             <div class="footer-bottom">
-
                 <div class="footer-legal">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
+                    <a href="#">プライバシーポリシー</a>
+                    <a href="#">利用規約</a>
                 </div>
             </div>
         </div>
     </footer>
+    
 
     <!-- Back to Top Button -->
     <a href="#home" class="back-to-top">
@@ -1274,13 +1243,13 @@ body {
     </a>
 
     <!-- <div class="gtranslate_wrapper"></div>
-<script>window.gtranslateSettings = {"default_language":"en","languages":["en","ar","ja","ur"],"wrapper_selector":".gtranslate_wrapper"}</script>
-<script src="https://cdn.gtranslate.net/widgets/latest/dwf.js" defer></script> -->
+    <script>window.gtranslateSettings = { "default_language": "en", "languages": ["en", "ar", "ja", "ur"], "wrapper_selector": ".gtranslate_wrapper" }</script>
+    <script src="https://cdn.gtranslate.net/widgets/latest/dwf.js" defer></script> -->
 
     <!-- Elfsight Website Translator | lang-translator -->
-<!-- <script src="https://static.elfsight.com/platform/platform.js" async></script>
+    <!-- <script src="https://static.elfsight.com/platform/platform.js" async></script>
 <div class="elfsight-app-aaf479f7-87d8-4a0d-a41b-490ec6e35de2" data-elfsight-app-lazy></div>  -->
-<!-- 
+    <!-- 
     <div id="language-switcher" class="language-switcher">
         <button id="translate-button">
             <img src="https://flagcdn.com/jp.svg" width="20" id="current-flag" alt="Flag">
@@ -1291,7 +1260,6 @@ body {
             <a href="#" data-lang="ja" data-flag="https://flagcdn.com/jp.svg">🇯🇵 日本語</a>
         </div>
     </div> -->
-
 
 
     <script src="script.js"></script>
