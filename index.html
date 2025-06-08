@@ -9,23 +9,90 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <script type="text/javascript">
+    <script>
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({
-                pageLanguage: 'en', // Default language of the page
-                includedLanguages: 'en,hi,ja,ur,ar', // Available languages
+                pageLanguage: 'en',
+                includedLanguages: 'en,ja',
                 layout: google.translate.TranslateElement.InlineLayout.SIMPLE
             }, 'google_translate_element');
+
+            // Hide Google's default dropdown
+            setTimeout(() => {
+                const googleDropdown = document.querySelector('.goog-te-combo');
+                if (googleDropdown) googleDropdown.style.display = 'none';
+            }, 500);
         }
     </script>
-    <script type="text/javascript"
-        src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <style>
+      /* Language Switcher */
+.language-switcher {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 9999;
+}
+
+#translate-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: white;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+#translate-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+#current-flag {
+  width: 20px;
+  height: 15px;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .language-switcher {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/* Google Translate adjustments */
+.goog-te-banner-frame {
+  display: none !important;
+}
+
+body {
+  top: 0 !important;
+}
+
+/* Fix for translated content layout */
+[lang="ja"] {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 
+               "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+}
+    </style>
 
 </head>
 
 <body>
-   <!-- Particles Container -->
-<div id="tsparticles"></div>
+
+    <!-- hidden off-screen, but still in the DOM -->
+    <div id="google_translate_element" style="position:absolute; left:-9999px; top:0; visibility:hidden;"></div>
+
+    <!-- Particles Container -->
+    <div id="tsparticles"></div>
 
     <!-- Header -->
     <header class="header">
@@ -51,26 +118,7 @@
                 </div>
             </nav>
 
-            <!-- Add this inside your header, after the nav element -->
-            <!-- <div class="language-switcher">
-                <button id="translate-button">
-                    <i class="fas fa-language"></i>
-                    <span id="current-language">EN</span>
-                    <i class="fas fa-chevron-down"></i>
-                </button>
-                <div class="language-dropdown">
-                    <a href="#" data-lang="en">🇬🇧 English</a>
-                    <a href="#" data-lang="ar">🇸🇦 العربية</a>
-                    <a href="#" data-lang="zh">🇨🇳 中文</a>
-                    <a href="#" data-lang="fr">🇫🇷 Français</a>
-                    <a href="#" data-lang="de">🇩🇪 Deutsch</a>
-                    <a href="#" data-lang="hi">🇮🇳 हिन्दी</a>
-                    <a href="#" data-lang="ja">🇯🇵 日本語</a>
-                    <a href="#" data-lang="ru">🇷🇺 Русский</a>
-                    <a href="#" data-lang="es">🇪🇸 Español</a>
-                    <a href="#" data-lang="ur">🇵🇰 اردو</a>
-                </div>
-            </div> -->
+
         </div>
     </header>
 
@@ -91,7 +139,7 @@
                         <span class="typewriter" data-words='["Full Stack Engineer", "Expat Living in Japan"]'></span>
                     </span>
                 </h2>
-                
+
                 <p></p>
                 <p class="hero-text animate">This is Muhammad Kamran. I am from Pakistan. I have worked as a software
                     engineer back in my country.
@@ -105,13 +153,13 @@
                 </p>
                 <div class="hero-buttons animate">
                     <a href="#portfolio" class="btn btn-primary">View My Work</a>
+                    <a href="Kamran-cv-japanese.pdf" target="_blank" class="btn btn-primary">Download CV</a>
                     <!-- <a href="#contact" class="btn btn-secondary">Hire Me</a> -->
                 </div>
             </div>
             <div class="hero-image animate">
                 <div class="image-wrapper">
-                    <img src="gallary/heading.jpg" height="500" width="500"
-                        alt="Web Developer">
+                    <img src="gallary/heading.jpg" height="500" width="500" alt="Web Developer">
                     <div class="image-overlay"></div>
                 </div>
             </div>
@@ -233,8 +281,8 @@
                                 </div>
                             </div>
                         </div>
-                        
-                        
+
+
 
 
                         <div class="skill-card">
@@ -248,8 +296,8 @@
                                 </div>
                             </div>
                         </div>
-                        
-                        
+
+
 
                         <div class="skill-card">
                             <div class="skill-icon">
@@ -480,50 +528,17 @@
                         <span class="timeline-date">Sep 2016 - Nov 2020</span>
                     </div>
 
-                    <div class="timeline-card animate">
-                        <h4>Intermediate in Computer Science</h4>
-                        <h5>Punjab College, Jhelum</h5>
-                        <p>Studied fundamental programming and software engineering</p>
-                        <span class="timeline-date">2013 - 2015</span>
-                    </div>
+
                 </div>
 
                 <!-- Right Column (Professional Experience) -->
                 <div class="timeline-column experience-column">
                     <h3 class="column-title">Professional Experience</h3>
                     <div class="timeline-card animate">
-                        <h4>Website Developer</h4>
-                        <h5>
-                            <u><a href="https://reblatesols.com/" target="_blank">Reblate Solutions</a></u>
-                        </h5>
-                        <p>Worked as full stack web developer</p>
-                        <span class="timeline-date">Sep 2023 - Sep 2024</span>
-                        <div class="skills">
-                            <span class="timeline-date">PHP</span>
-                            <span class="timeline-date">JavaScript</span>
-                            <span class="timeline-date">CSS3</span>
-                            <span class="timeline-date">WordPress</span>
-                            <span class="timeline-date">Laravel</span>
-                        </div>
-                    </div>
-                    <div class="timeline-card animate">
-                        <h4>PHP Developer </h4>
-                        <h5><u><a href="https://www.estoresexperts.com/" target="_blank">Estores Experts</a></u></h5>
-                        <p>Worked as PHP web developer</p>
-                        <span class="timeline-date">Feb 2023 - Sep 2023</span>
-                        <div class="skills">
-                            <span class="timeline-date">PHP</span>
-                            <span class="timeline-date">JavaScript</span>
-                            <span class="timeline-date">CSS3</span>
-                            <span class="timeline-date">WordPress</span>
-                            <!-- <span class="timeline-date">Laravel</span> -->
-                        </div>
-                    </div>
-                    <div class="timeline-card animate">
-                        <h4>PHP Developer </h4>
+                        <h4>Full Time Freelancer </h4>
                         <h5><u><a href="https://unique-links.com/" target="_blank">Unique Links</a></u></h5>
-                        <p>Worked as PHP web developer</p>
-                        <span class="timeline-date">Jan 2022 - Feb 2023</span>
+                        <p>Worked as Full Stack Egninerr </p>
+                        <span class="timeline-date">Feb 2022 - Aug 2024</span>
                         <div class="skills">
                             <span class="timeline-date">PHP</span>
                             <span class="timeline-date">JavaScript</span>
@@ -603,26 +618,28 @@
 
         /* Timeline Cards */
         .timeline-card {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    text-align: left;
-    position: relative;
-    overflow: hidden; /* Ensures no unwanted spacing */
-}
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            text-align: left;
+            position: relative;
+            overflow: hidden;
+            /* Ensures no unwanted spacing */
+        }
 
-.timeline-card::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 5px;
-    height: 100%;
-    background: linear-gradient(135deg, #6c63ff 0%, #ff6584 100%);
-    border-radius: 10px 0 0 10px; /* Match the card's border radius */
-}
+        .timeline-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(135deg, #6c63ff 0%, #ff6584 100%);
+            border-radius: 10px 0 0 10px;
+            /* Match the card's border radius */
+        }
 
         .timeline-card h4 {
             font-size: 1.2rem;
@@ -737,7 +754,9 @@
                     </div>
                     <h3>Scientific Computing With Python</h3>
                     <p>Issued by Freecodecamp • 2023</p>
-                    <a target="_blank" href="https://www.freecodecamp.org/certification/mohammad_kamran/scientific-computing-with-python-v7" class="btn btn-small">View Credential</a>
+                    <a target="_blank"
+                        href="https://www.freecodecamp.org/certification/mohammad_kamran/scientific-computing-with-python-v7"
+                        class="btn btn-small">View Credential</a>
                 </div>
 
                 <div class="certification-card animate">
@@ -746,7 +765,9 @@
                     </div>
                     <h3>Data Analysis With Python</h3>
                     <p>Issued by Freecodecamp • 2023</p>
-                    <a target="_blank" href="https://www.freecodecamp.org/certification/mohammad_kamran/data-analysis-with-python-v7" class="btn btn-small">View Credential</a>
+                    <a target="_blank"
+                        href="https://www.freecodecamp.org/certification/mohammad_kamran/data-analysis-with-python-v7"
+                        class="btn btn-small">View Credential</a>
                 </div>
 
                 <div class="certification-card animate">
@@ -755,7 +776,9 @@
                     </div>
                     <h3>Google Digital Marketing</h3>
                     <p>Issued by Google • 2020</p>
-                    <a target="_blank" href="https://www.linkedin.com/in/mokamran/details/certifications/1702541704516/single-media-viewer/?type=IMAGE&profileId=ACoAAC-pnmUBZNPYAO6bAepZAN1JRHtpe7qyTGM" class="btn btn-small">View Credential</a>
+                    <a target="_blank"
+                        href="https://www.linkedin.com/in/mokamran/details/certifications/1702541704516/single-media-viewer/?type=IMAGE&profileId=ACoAAC-pnmUBZNPYAO6bAepZAN1JRHtpe7qyTGM"
+                        class="btn btn-small">View Credential</a>
                 </div>
 
             </div>
@@ -778,121 +801,123 @@
             <div class="portfolio-grid">
                 <div class="portfolio-item animate" data-category="web">
                     <div class="portfolio-image">
-                        <img src="portfolio/estores-experts.png"
-                            alt="E-commerce Website">
+                        <img src="portfolio/estores-experts.png" alt="E-commerce Website">
                         <div class="portfolio-overlay">
                             <h3>Expert Estores</h3>
                             <p>Ecommerce Agency Website</p>
-                            <a target="_blank" href="https://www.estoresexperts.com" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a target="_blank" href="https://www.estoresexperts.com" class="portfolio-link"><i
+                                    class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="portfolio-item animate" data-category="ecom">
                     <div class="portfolio-image">
-                        <img src="portfolio/mosle.png"
-                            alt="E-commerce Website">
+                        <img src="portfolio/mosle.png" alt="E-commerce Website">
                         <div class="portfolio-overlay">
                             <h3>Mosle Inc</h3>
-                            <p>Ecommerce  Website</p>
-                            <a target="_blank" href="https://mosleinc.com" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
+                            <p>Ecommerce Website</p>
+                            <a target="_blank" href="https://mosleinc.com" class="portfolio-link"><i
+                                    class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="portfolio-item animate" data-category="web">
                     <div class="portfolio-image">
-                        <img src="portfolio/advocate-raja.png"
-                            alt="E-commerce Website">
+                        <img src="portfolio/advocate-raja.png" alt="E-commerce Website">
                         <div class="portfolio-overlay">
                             <h3>Advocate Raja</h3>
-                            <p>Personal  Website</p>
-                            <a target="_blank" href="https://advocateraja.com/" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
+                            <p>Personal Website</p>
+                            <a target="_blank" href="https://advocateraja.com/" class="portfolio-link"><i
+                                    class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
                 </div>
 
                 <div class="portfolio-item animate" data-category="web">
                     <div class="portfolio-image">
-                        <img src="portfolio/unique-links.png"
-                            alt="Task Management App">
+                        <img src="portfolio/unique-links.png" alt="Task Management App">
                         <div class="portfolio-overlay">
                             <h3>Unique Links</h3>
                             <p>Web Hosting Company Website</p>
-                            <a target="_blank" href="https://www.unique-links.com.pk/" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a target="_blank" href="https://www.unique-links.com.pk/" class="portfolio-link"><i
+                                    class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
                 </div>
 
                 <div class="portfolio-item animate" data-category="ecom">
                     <div class="portfolio-image">
-                        <img src="portfolio/zoo-bounty.png"
-                            alt="Fitness App UI">
+                        <img src="portfolio/zoo-bounty.png" alt="Fitness App UI">
                         <div class="portfolio-overlay">
                             <h3>Zoo Bounty</h3>
                             <p>Online Shopping Website</p>
-                            <a target="_blank" href="https://zoo-bounty.com/" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a target="_blank" href="https://zoo-bounty.com/" class="portfolio-link"><i
+                                    class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
                 </div>
 
                 <div class="portfolio-item animate" data-category="web">
                     <div class="portfolio-image">
-                        <img src="portfolio/huffaz-academy.png"
-                            alt="Corporate Website">
+                        <img src="portfolio/huffaz-academy.png" alt="Corporate Website">
                         <div class="portfolio-overlay">
                             <h3>Huffaz Academy</h3>
                             <p>Quran Classes Website</p>
-                            <a target="_blank" href="https://huffazacademy.com/" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a target="_blank" href="https://huffazacademy.com/" class="portfolio-link"><i
+                                    class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
                 </div>
 
                 <div class="portfolio-item animate" data-category="web">
                     <div class="portfolio-image">
-                        <img src="portfolio/swif-sol.png"
-                            alt="Weather Dashboard">
+                        <img src="portfolio/swif-sol.png" alt="Weather Dashboard">
                         <div class="portfolio-overlay">
                             <h3>Swif Sol</h3>
                             <p>Digital Markering Agency Website</p>
-                            <a target="_blank" href="https://swifsol.com/" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a target="_blank" href="https://swifsol.com/" class="portfolio-link"><i
+                                    class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
                 </div>
 
                 <div class="portfolio-item animate" data-category="web">
                     <div class="portfolio-image">
-                        <img src="portfolio/reblate-sols.png"
-                            alt="CRM">
+                        <img src="portfolio/reblate-sols.png" alt="CRM">
                         <div class="portfolio-overlay">
                             <h3>Company CRM Project</h3>
                             <p>JavaScript + Laravel Web App</p>
-                            <a target="_blank" href="https://crm.reblatesols.com/login" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a target="_blank" href="https://crm.reblatesols.com/login" class="portfolio-link"><i
+                                    class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
                 </div>
 
                 <div class="portfolio-item animate" data-category="other">
                     <div class="portfolio-image">
-                        <img src="portfolio/firex.png"
-                            alt="CRM">
+                        <img src="portfolio/firex.png" alt="CRM">
                         <div class="portfolio-overlay">
                             <h3>Firex Unity Project</h3>
                             <p>Unity and C# Final Yeal Project</p>
-                            <a target="_blank" href="https://www.linkedin.com/posts/mokamran_finalyearproject-indiegame-gamedevlife-activity-7143562652156420096-nOJh?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAC-pnmUBZNPYAO6bAepZAN1JRHtpe7qyTGM" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a target="_blank"
+                                href="https://www.linkedin.com/posts/mokamran_finalyearproject-indiegame-gamedevlife-activity-7143562652156420096-nOJh?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAC-pnmUBZNPYAO6bAepZAN1JRHtpe7qyTGM"
+                                class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
                 </div>
 
-                <div class="portfolio-item animate" data-category="other">
+                <!-- <div class="portfolio-item animate" data-category="other">
                     <div class="portfolio-image">
-                        <img src="portfolio/data-analysis.jpeg"
-                            alt="Data Analystics">
+                        <img src="portfolio/data-analysis.jpeg" alt="Data Analystics">
                         <div class="portfolio-overlay">
                             <h3>Sample Data analytics</h3>
                             <p>Excel</p>
-                            <a target="_blank" href="https://www.linkedin.com/posts/mokamran_dataanalysis-excel-dashboard-activity-7305608912194437120-xuis?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAC-pnmUBZNPYAO6bAepZAN1JRHtpe7qyTGM" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a target="_blank"
+                                href="https://www.linkedin.com/posts/mokamran_dataanalysis-excel-dashboard-activity-7305608912194437120-xuis?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAC-pnmUBZNPYAO6bAepZAN1JRHtpe7qyTGM"
+                                class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
@@ -905,16 +930,14 @@
 
             <div class="gallery-grid">
                 <div class="gallery-item animate">
-                    <img src="gallary/cat-island.jpg"
-                        alt="Mountain Landscape">
+                    <img src="gallary/cat-island.jpg" alt="Mountain Landscape">
                     <div class="gallery-overlay">
-                       <h3>Cat Island, Japan</h3>
+                        <h3>Cat Island, Japan</h3>
                     </div>
                 </div>
 
                 <div class="gallery-item animate">
-                    <img src="gallary/flower.jpg"
-                        alt="Beach Sunset">
+                    <img src="gallary/flower.jpg" alt="Beach Sunset">
                     <div class="gallery-overlay">
                         <h3>Flower Festival</h3>
                         <!-- <p>Sunset at Seminyak Beach</p> -->
@@ -922,8 +945,7 @@
                 </div>
 
                 <div class="gallery-item animate">
-                    <img src="gallary/freinds-2.jpg"
-                        alt="City Skyline">
+                    <img src="gallary/freinds-2.jpg" alt="City Skyline">
                     <div class="gallery-overlay">
                         <h3>Friends Outside</h3>
                         <!-- <p>View from Brooklyn Bridge</p> -->
@@ -931,8 +953,7 @@
                 </div>
 
                 <div class="gallery-item animate">
-                    <img src="gallary/friends.jpg"
-                        alt="City Skyline">
+                    <img src="gallary/friends.jpg" alt="City Skyline">
                     <div class="gallery-overlay">
                         <h3>Friends Outside</h3>
                         <!-- <p>View from Brooklyn Bridge</p> -->
@@ -940,136 +961,119 @@
                 </div>
 
                 <div class="gallery-item animate">
-                    <img src="gallary/fukuoka-2.jpg"
-                        alt="City Skyline">
+                    <img src="gallary/fukuoka-2.jpg" alt="City Skyline">
                     <div class="gallery-overlay">
                         <h3>Fukuoka</h3>
                         <!-- <p>View from Brooklyn Bridge</p> -->
                     </div>
                 </div>
                 <div class="gallery-item animate">
-                    <img src="gallary/fukuoka-temple.jpg"
-                        alt="City Skyline">
+                    <img src="gallary/fukuoka-temple.jpg" alt="City Skyline">
                     <div class="gallery-overlay">
                         <h3>Fukuoka Shrine</h3>
                         <!-- <p>View from Brooklyn Bridge</p> -->
                     </div>
                 </div>
                 <div class="gallery-item animate">
-                    <img src="gallary/japan-science.jpg"
-                        alt="City Skyline">
+                    <img src="gallary/japan-science.jpg" alt="City Skyline">
                     <div class="gallery-overlay">
                         <h3>Japan Science Museum</h3>
                         <!-- <p>View from Brooklyn Bridge</p> -->
                     </div>
                 </div>
                 <div class="gallery-item animate">
-                    <img src="gallary/japan-village.jpg"
-                        alt="City Skyline">
+                    <img src="gallary/japan-village.jpg" alt="City Skyline">
                     <div class="gallery-overlay">
                         <h3>Japan Village</h3>
                         <!-- <p>View from Brooklyn Bridge</p> -->
                     </div>
                 </div>
                 <div class="gallery-item animate">
-                    <img src="gallary/japan.jpg"
-                        alt="City Skyline">
+                    <img src="gallary/japan.jpg" alt="City Skyline">
                     <div class="gallery-overlay">
                         <h3>Japan</h3>
                         <!-- <p>View from Brooklyn Bridge</p> -->
                     </div>
                 </div>
                 <div class="gallery-item animate">
-                    <img src="gallary/onga.jpg"
-                        alt="City Skyline">
+                    <img src="gallary/onga.jpg" alt="City Skyline">
                     <div class="gallery-overlay">
                         <h3>Onga River Japan</h3>
                         <!-- <p>View from Brooklyn Bridge</p> -->
                     </div>
                 </div>
                 <div class="gallery-item animate">
-                    <img src="gallary/sea-2.jpg"
-                        alt="City Skyline">
+                    <img src="gallary/sea-2.jpg" alt="City Skyline">
                     <div class="gallery-overlay">
                         <h3>Sea in Japan</h3>
                         <!-- <p>View from Brooklyn Bridge</p> -->
                     </div>
                 </div>
                 <div class="gallery-item animate">
-                    <img src="gallary/sea.jpg"
-                        alt="City Skyline">
+                    <img src="gallary/sea.jpg" alt="City Skyline">
                     <div class="gallery-overlay">
                         <h3>Sea in Japan</h3>
                         <!-- <p>View from Brooklyn Bridge</p> -->
                     </div>
                 </div>
                 <div class="gallery-item animate">
-                    <img src="gallary/sea-3.jpg"
-                        alt="City Skyline">
+                    <img src="gallary/sea-3.jpg" alt="City Skyline">
                     <div class="gallery-overlay">
                         <h3>Sea in Japan</h3>
                         <!-- <p>View from Brooklyn Bridge</p> -->
                     </div>
                 </div>
                 <div class="gallery-item animate">
-                    <img src="gallary/tokyo.jpg"
-                        alt="City Skyline">
+                    <img src="gallary/tokyo.jpg" alt="City Skyline">
                     <div class="gallery-overlay">
                         <h3>Tokyo</h3>
                         <!-- <p>View from Brooklyn Bridge</p> -->
                     </div>
                 </div>
                 <div class="gallery-item animate">
-                    <img src="gallary/tokyo.jpg"
-                        alt="City Skyline">
+                    <img src="gallary/tokyo.jpg" alt="City Skyline">
                     <div class="gallery-overlay">
                         <h3>Tokyo</h3>
                         <!-- <p>View from Brooklyn Bridge</p> -->
                     </div>
                 </div>
                 <div class="gallery-item animate">
-                    <img src="gallary/tokyo-2.jpg"
-                        alt="City Skyline">
+                    <img src="gallary/tokyo-2.jpg" alt="City Skyline">
                     <div class="gallery-overlay">
                         <h3>Tokyo</h3>
                         <!-- <p>View from Brooklyn Bridge</p> -->
                     </div>
                 </div>
                 <div class="gallery-item animate">
-                    <img src="gallary/tokyo-3.jpg"
-                        alt="City Skyline">
+                    <img src="gallary/tokyo-3.jpg" alt="City Skyline">
                     <div class="gallery-overlay">
                         <h3>Tokyo</h3>
                         <!-- <p>View from Brooklyn Bridge</p> -->
                     </div>
                 </div>
                 <div class="gallery-item animate">
-                    <img src="gallary/tokyo-match.jpg"
-                        alt="City Skyline">
+                    <img src="gallary/tokyo-match.jpg" alt="City Skyline">
                     <div class="gallery-overlay">
                         <h3>Tokyo Soccer Match</h3>
                         <!-- <p>View from Brooklyn Bridge</p> -->
                     </div>
                 </div>
                 <div class="gallery-item animate">
-                    <img src="gallary/ukk-uni.jpg"
-                        alt="City Skyline">
+                    <img src="gallary/ukk-uni.jpg" alt="City Skyline">
                     <div class="gallery-overlay">
                         <h3>University of Kitakyushu</h3>
                         <!-- <p>View from Brooklyn Bridge</p> -->
                     </div>
                 </div>
                 <div class="gallery-item animate">
-                    <img src="gallary/ukk-2.jpg"
-                        alt="City Skyline">
+                    <img src="gallary/ukk-2.jpg" alt="City Skyline">
                     <div class="gallery-overlay">
                         <h3>University of Kitakyushu</h3>
                         <!-- <p>View from Brooklyn Bridge</p> -->
                     </div>
                 </div>
                 <div class="gallery-item animate">
-                    <img src="gallary/ukk-3.jpg"
-                        alt="City Skyline">
+                    <img src="gallary/ukk-3.jpg" alt="City Skyline">
                     <div class="gallery-overlay">
                         <h3>University of Kitakyushu</h3>
                         <!-- <p>View from Brooklyn Bridge</p> -->
@@ -1082,65 +1086,81 @@
     </section>
 
 
-<!-- Contact Section -->
-<section id="contact" class="contact">
-    <div class="container">
-        <h2 class="section-title animate text-gradient"><span>Get in Touch</span></h2>
-        <p class="section-subtitle animate">Let's work together!</p>
 
-        <div class="contact-content">
-            <div class="contact-info animate">
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fas fa-map-marker-alt"></i>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title animate text-gradient"><span>Get in Touch</span></h2>
+            <p class="section-subtitle animate">Let's work together!</p>
+
+            <div class="contact-content">
+                <div class="contact-info animate">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Location</h3>
+                            <p>Fukuoka, Japan</p>
+                        </div>
                     </div>
-                    <div class="contact-text">
-                        <h3>Location</h3>
-                        <p>Fukuoka, Japan</p>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Email</h3>
+                            <p>mohammadkamran1515@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Phone</h3>
+                            <p>Coming Soon</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-social">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://x.com/being_m_kamran" target="_blank" class="social-link"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/in/mokamran/" target="_blank" class="social-link"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/mohakamran" target="_blank" class="social-link"><i
+                                class="fab fa-github"></i></a>
+                        <a href="https://www.youtube.com/@muhkamran1034" target="_blank" class="social-link"><i
+                                class="fab fa-youtube"></i></a>
+                        <a href="https://instagram.com/being_m_kamran" target="_blank" class="social-link"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://tiktok.com/@mohammad_kamran_" target="_blank" class="social-link"><i
+                                class="fab fa-tiktok"></i></a>
                     </div>
                 </div>
 
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <div class="contact-text">
-                        <h3>Email</h3>
-                        <p>mohammadkamran1515@gmail.com</p>
-                    </div>
+                <!-- Alternative for Contact Form -->
+                <div class="contact-form animate"
+                    style="background-color: rgba(255,255,255,0.9); border-radius:10px; padding:30px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align:center;">
+                    <h3 style="margin-bottom:20px;">I'm open for collaborations, projects, and discussions!</h3>
+                    <p style="margin-bottom:30px; color: var(--gray-color);">Feel free to reach out via email. Let's
+                        build something amazing together!</p>
+                    <a href="mailto:mohammadkamran1515@gmail.com" class="btn btn-primary">Email Me</a>
                 </div>
 
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fas fa-phone"></i>
-                    </div>
-                    <div class="contact-text">
-                        <h3>Phone</h3>
-                        <p>Coming Soon</p>
-                    </div>
-                </div>
-
-                <div class="contact-social">
-                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://x.com/being_m_kamran" target="_blank" class="social-link"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.linkedin.com/in/mokamran/" target="_blank" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://github.com/mohakamran" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
-                    <a href="https://www.youtube.com/@muhkamran1034" target="_blank" class="social-link"><i class="fab fa-youtube"></i></a>
-                    <a href="https://instagram.com/being_m_kamran" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
-                    <a href="https://tiktok.com/@mohammad_kamran_" target="_blank" class="social-link"><i class="fab fa-tiktok"></i></a>
-                </div>
             </div>
-
-            <!-- Alternative for Contact Form -->
-            <div class="contact-form animate" style="background-color: rgba(255,255,255,0.9); border-radius:10px; padding:30px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align:center;">
-                <h3 style="margin-bottom:20px;">I'm open for collaborations, projects, and discussions!</h3>
-                <p style="margin-bottom:30px; color: var(--gray-color);">Feel free to reach out via email. Let's build something amazing together!</p>
-                <a href="mailto:mohammadkamran1515@gmail.com" class="btn btn-primary">Email Me</a>
-            </div>
-
         </div>
-    </div>
-</section>
+    </section>
+
+    <!-- Google Translate Element (hidden) -->
+    <div id="google_translate_element" style="display:none;"></div>
+
+ 
+
+
 
 
     <!-- Footer -->
@@ -1169,18 +1189,18 @@
                 <div class="footer-links">
                     <h3>Services</h3>
                     <ul>
-                        <li><a href="#">Website Development</a></li>
-                        <li><a href="#">Web Design</a></li>
+                        <li><a href="#">Web Design & Development</a></li>
+                        <!-- <li><a href="#">Web Design</a></li> -->
                         <li><a href="#">Ecommerce Development</a></li>
                         <li><a href="#">Landing Pages</a></li>
-                        <li><a href="#">WordPress Development</a></li>
-                        <li><a href="#">Portfolio Websites</a></li>
+                        <!-- <li><a href="#">WordPress Development</a></li> -->
+                        <!-- <li><a href="#">Portfolio Websites</a></li> -->
                         <li><a href="#">Business Websites</a></li>
                         <li><a href="#">Website Maintenance</a></li>
-                        <li><a href="#">Speed Optimization</a></li>
+                        <!-- <li><a href="#">Speed Optimization</a></li> -->
                         <li><a href="#">API Integration</a></li>
-                        <li><a href="#">Server Management</a></li>
-                    </ul>                    
+                        <!-- <li><a href="#">Server Management</a></li> -->
+                    </ul>
                 </div>
 
                 <div class="footer-newsletter">
@@ -1194,7 +1214,7 @@
             </div>
 
             <div class="footer-bottom">
-                
+
                 <div class="footer-legal">
                     <a href="#">Privacy Policy</a>
                     <a href="#">Terms of Service</a>
@@ -1207,52 +1227,69 @@
     <a href="#home" class="back-to-top">
         <i class="fas fa-arrow-up"></i>
     </a>
+<!-- 
+    <div id="language-switcher" class="language-switcher">
+        <button id="translate-button">
+            <img src="https://flagcdn.com/jp.svg" width="20" id="current-flag" alt="Flag">
+            <span id="current-language">日本語</span>
+        </button>
+        <div class="language-dropdown">
+            <a href="#" data-lang="en" data-flag="https://flagcdn.com/us.svg">🇺🇸 English</a>
+            <a href="#" data-lang="ja" data-flag="https://flagcdn.com/jp.svg">🇯🇵 日本語</a>
+        </div>
+    </div> -->
 
-   
-<!-- Include the tsparticles library -->
-<script src="https://cdn.jsdelivr.net/npm/tsparticles@1.39.0/tsparticles.min.js"></script>
-<script>
-    tsParticles.load("tsparticles", {
-        "particles": {
-            "number": {
-                "value": 50,  // Number of particles (reduce to get fewer particles)
-                "density": {
-                    "enable": true,
-                    "value_area": 800  // Controls the density of particles
-                }
-            },
-            "size": {
-                "value": 3,  // Size of each particle (adjust as needed)
-                "random": true  // Randomize the size
-            },
-            "move": {
-                "enable": true,
-                "speed": 1,  // Speed of particle movement (lower = slower)
-                "direction": "none",  // Particles move in random directions
-                "outModes": {
-                    "default": "out"
-                },
-                "attract": {
-                    "enable": false
-                }
-            },
-            "opacity": {
-                "value": 0.5,  // Transparency of particles
-                "random": true
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const translatorConfig = {
+            en: { flag: 'us', name: 'English' },
+            ja: { flag: 'jp', name: '日本語' }
+          };
+        
+          // Initialize with English
+          let currentLang = 'en';
+          document.documentElement.lang = currentLang;
+        
+          // Button click handler
+          document.getElementById('translate-button').addEventListener('click', function() {
+            currentLang = currentLang === 'en' ? 'ja' : 'en';
+            
+            // Trigger Google Translate
+            const select = document.querySelector('.goog-te-combo');
+            if (select) {
+              select.value = currentLang;
+              select.dispatchEvent(new Event('change'));
             }
-        },
-        "interactivity": {
-            "events": {
-                "onhover": {
-                    "enable": false
-                }
-            }
-        }
-    });
-</script>
+            
+            // Update UI
+            updateLanguageButton(currentLang);
+            document.documentElement.lang = currentLang;
+            localStorage.setItem('preferredLanguage', currentLang);
+          });
+        
+          // Update button display
+          function updateLanguageButton(lang) {
+            const nextLang = lang === 'en' ? 'ja' : 'en';
+            document.getElementById('current-flag').src = 
+              `https://flagcdn.com/${translatorConfig[nextLang].flag}.svg`;
+            document.getElementById('current-language').textContent = 
+              translatorConfig[nextLang].name;
+          }
+        
+          // Load saved preference
+          const savedLang = localStorage.getItem('preferredLanguage');
+          if (savedLang && translatorConfig[savedLang]) {
+            currentLang = savedLang;
+            const select = document.querySelector('.goog-te-combo');
+            if (select) select.value = currentLang;
+            updateLanguageButton(currentLang);
+          }
+        });
+        </script>
+
+
+
     <script src="script.js"></script>
-   
-    
 </body>
 
 </html>
