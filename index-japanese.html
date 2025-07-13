@@ -1,0 +1,1307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ムハンマド・カムラン | ウェブ開発者</title>
+    <link rel="icon" href="gallary/web.png" type="image/svg+xml">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- <script>
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'en,ja',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+
+            // Hide Google's default dropdown
+            setTimeout(() => {
+                const googleDropdown = document.querySelector('.goog-te-combo');
+                if (googleDropdown) googleDropdown.style.display = 'none';
+            }, 500);
+        }
+    </script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> -->
+    <!-- <style>
+        /* Language Switcher */
+        .language-switcher {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 9999;
+        }
+
+        #translate-button {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: white;
+            border: none;
+            border-radius: 30px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        #translate-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        #current-flag {
+            width: 20px;
+            height: 15px;
+            object-fit: cover;
+            border-radius: 2px;
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+            .language-switcher {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+        /* Google Translate adjustments */
+        .goog-te-banner-frame {
+            display: none !important;
+        }
+
+        body {
+            top: 0 !important;
+        }
+
+        /* Fix for translated content layout */
+        [lang="ja"] {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+        }
+    </style> -->
+
+</head>
+
+<body>
+
+    <!-- hidden off-screen, but still in the DOM -->
+    <div id="google_translate_element" style="position:absolute; left:-9999px; top:0; visibility:hidden;"></div>
+
+    <!-- Particles Container -->
+    <div id="tsparticles"></div>
+
+    <!-- Header -->
+    <!-- Header (Japanese Version with Katakana name) -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-text text-gradient">カムラン・ムハンマド</span>
+                <span class="logo-dot">.</span>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#home" class="nav-link active">ホーム</a></li>
+                    <li class="nav-item"><a href="#skills" class="nav-link">スキル</a></li>
+                    <li class="nav-item"><a href="#timeline-section" class="nav-link">学歴・職歴</a></li>
+                    <li class="nav-item"><a href="#certifications" class="nav-link">認定資格</a></li>
+                    <li class="nav-item"><a href="#portfolio" class="nav-link">ポートフォリオ</a></li>
+                    <li class="nav-item"><a href="#gallery" class="nav-link">ギャラリー</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">お問い合わせ</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+
+
+
+
+
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title animate">
+                    はじめまして、<span class="text-gradient">カムラン・ムハンマド</span> と申します。
+                </h1>
+                <h2 class="hero-subtitle animate">
+                    <span class="typewriter" data-words='["フルスタックエンジニア", "日本在住の外国人"]'></span>
+                </h2>
+
+                <p class="hero-text animate">
+                    私はパキスタン出身のカムラン・ムハンマドです。母国ではソフトウェアエンジニアとして勤務しておりました。
+                    PHP、Laravel、JavaScript、WordPress、Shopify、React など、幅広いウェブ技術を用いて世界中のクライアントのビジネス成長をサポートしてきました。
+                </p>
+
+                <p class="hero-text animate">
+                    現在は日本で応用情報システムの修士課程に在籍しております。<span class="text-gradient"><u>交通シミュレーションと心理学</u></span> に関する研究を行っており、
+                    運転者の行動を分析し、現実世界における交通事故の減少に貢献することを目指しています。
+                </p>
+
+                <div class="hero-buttons animate">
+                    <a href="cv-english.pdf" target="_blank" class="btn btn-primary">英文履歴書ダウンロード</a>
+                    <a href="cv-japanese.pdf" target="_blank" class="btn btn-primary">履歴書ダウンロード</a>
+                </div>
+
+            </div>
+            <div class="hero-image animate">
+                <div class="image-wrapper">
+                    <img src="gallary/heading.jpg" height="500" width="500" alt="Web Developer">
+                    <div class="image-overlay"></div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <!-- <span>Scroll Down</span> -->
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title animate text-gradient"><span>スキル一覧</span></h2>
+            <p class="section-subtitle animate">習得している技術とツール</p>
+    
+            <div class="skills-categories">
+                <!-- Web Development -->
+                <div class="skills-category animate">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>ウェブ開発</h3>
+                    </div>
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fab fa-wordpress"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>ワードプレス</h4>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="90%"></div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fab fa-html5"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>HTML5</h4>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="95%"></div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fab fa-css3-alt"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>CSS3</h4>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="90%"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fab fa-git-alt"></i> <!-- Git icon from Font Awesome -->
+                            </div>
+                            <div class="skill-info">
+                                <h4>Git / GitHub CLI</h4>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="70%"></div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fab fa-js"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>ジャバスクリプト</h4>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="85%"></div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fab fa-bootstrap"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>ブートストラップ</h4>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="88%"></div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fab fa-css3-alt"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>テイルウィンドCSS</h4>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="85%"></div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-cube"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>ユニティ</h4>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="20%"></div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-gamepad"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>アンリアルエンジン</h4>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="15%"></div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fab fa-shopify"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>ショッピファイ</h4>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="90%"></div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fab fa-react"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>リアクト</h4>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="80%"></div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fab fa-laravel"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>ララベル</h4>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="78%"></div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fab fa-php"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>PHP</h4>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="75%"></div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>データベース</h4>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="82%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Data Analysis -->
+                <!-- <div class="skills-category animate">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>データ分析</h3>
+                    </div>
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fab fa-python"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>パイソン</h4>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="85%"></div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>SQL</h4>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="80%"></div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-file-excel"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>エクセル</h4>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="90%"></div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <img src="https://img.icons8.com/color/48/000000/power-bi.png" alt="Power BI">
+                            </div>
+                            <div class="skill-info">
+                                <h4>パワー・ビーアイ</h4>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="75%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+    
+                <!-- Other Skills -->
+                <!-- <div class="skills-category animate">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3>その他のスキル</h3>
+                    </div>
+                    <div class="skills-grid">
+                       
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-video"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>動画編集</h4>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="85%"></div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-palette"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>グラフィックデザイン</h4>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="90%"></div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-file-word"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>マイクロソフトオフィス</h4>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="95%"></div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>コミュニケーションスキル</h4>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="90%"></div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>教育指導</h4>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="80%"></div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-blog"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>ブログ執筆</h4>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="85%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+    
+
+
+    <!-- Employment Section -->
+    <section id="timeline-section" class="timeline-section">
+        <div class="container">
+            <h2 class="section-title animate text-gradient"><span>学歴・職歴</span></h2>
+            <p class="section-subtitle animate">教育背景と職務経験</p>
+
+            <div class="timeline-grid">
+                <!-- Left Column (Education) -->
+                <div class="timeline-column education-column">
+                    <h3 class="column-title">学歴</h3>
+
+                    <div class="timeline-card animate">
+                        <h4>応用情報システム 修士課程</h4>
+                        <h5>北九州市立大学（福岡、日本）</h5>
+                        <p>交通シミュレーションおよび心理学に関する研究に従事</p>
+                        <span class="timeline-date">2024年10月〜2026年9月</span>
+                    </div>
+
+                    <div class="timeline-card animate">
+                        <h4>情報技術 学士課程</h4>
+                        <h5>グジャラート大学（GPGC）、ジェルム</h5>
+                        <p>フルスタック開発およびソフトウェアアーキテクチャに注力</p>
+                        <span class="timeline-date">2016年9月〜2020年11月</span>
+                    </div>
+
+
+                </div>
+
+                <!-- Right Column (Professional Experience) -->
+                <div class="timeline-column experience-column">
+                    <h3 class="column-title">職務経験</h3>
+                    <div class="timeline-card animate">
+                        <h4>フルタイム フリーランスエンジニア</h4>
+                        <h5><u><a href="#" target="_blank">リモートクライアント</a></u></h5>
+                        <p>フルスタックエンジニアとして、PHP、JavaScript、Laravel、WordPress、Shopifyなどの技術を用いて開発業務を担当しました。</p>
+                        <span class="timeline-date">2022年2月〜2024年8月</span>
+                        <div class="skills">
+                            <span class="timeline-date">PHP</span>
+                            <span class="timeline-date">JavaScript</span>
+                            <span class="timeline-date">CSS3</span>
+                            <span class="timeline-date">WordPress</span>
+                            <!-- <span class="timeline-date">Laravel</span> -->
+                        </div>
+                    </div>
+                    <div class="timeline-card animate">
+                        <h4>コンピュータ講師</h4>
+                        <h5><u>コンピューターシティ</u></h5>
+                        <p>基本的なITスキルとウェブ開発について指導</p>
+                        <span class="timeline-date">2020年11月〜2021年12月</span>
+                        <div class="skills">
+                            <span class="timeline-date">デジタルマーケティング</span>
+                            <span class="timeline-date">ウェブデザインと開発</span>
+                            <span class="timeline-date">Eコマース</span>
+                            <span class="timeline-date">ビデオ編集</span>
+                            <!-- <span class="timeline-date">Laravel</span> -->
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        /* ===== Timeline Section ===== */
+        .timeline-section {
+            padding: 100px 0;
+            background-color: #f8f9fa;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .section-title span {
+            color: #000;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #6c757d;
+            margin-bottom: 40px;
+        }
+
+        /* Timeline Grid */
+        .timeline-grid {
+            display: flex;
+            gap: 40px;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+
+        /* Columns */
+        .timeline-column {
+            width: 48%;
+        }
+
+        /* Titles */
+        .column-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* Timeline Cards */
+        .timeline-card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            text-align: left;
+            position: relative;
+            overflow: hidden;
+            /* Ensures no unwanted spacing */
+        }
+
+        .timeline-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(135deg, #6c63ff 0%, #ff6584 100%);
+            border-radius: 10px 0 0 10px;
+            /* Match the card's border radius */
+        }
+
+        .timeline-card h4 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+            color: #000;
+            font-weight: 500;
+        }
+
+        .timeline-card h5 {
+            font-size: 1rem;
+            font-weight: 400;
+            color: #000;
+            margin-bottom: 10px;
+        }
+
+        .timeline-card p {
+            font-size: 0.9rem;
+            color: #333;
+            letter-spacing: 0.5px;
+        }
+
+        .timeline-date {
+            display: inline-block;
+            background: linear-gradient(135deg, #6c63ff 0%, #ff6584 100%);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-top: 10px;
+        }
+
+
+        /* Skills Badges */
+
+
+        .badge {
+            display: inline-block;
+            padding: 6px 12px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #fff;
+            border-radius: 20px;
+            margin: 5px 3px;
+        }
+
+        .bg-primary {
+            background-color: #007bff;
+        }
+
+        .bg-success {
+            background-color: #28a745;
+        }
+
+        .bg-warning {
+            background-color: #ffc107;
+            color: #212529;
+        }
+
+        .bg-info {
+            background-color: #17a2b8;
+            color: #212529;
+        }
+
+        .bg-danger {
+            background-color: #dc3545;
+        }
+
+        .bg-secondary {
+            background-color: #6c757d;
+        }
+
+        .bg-dark {
+            background-color: #343a40;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .timeline-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .timeline-column {
+                width: 90%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .timeline-column {
+                width: 100%;
+            }
+
+            .timeline-card {
+                text-align: center;
+                border-left: none;
+                border-top: 5px solid #007bff;
+            }
+        }
+    </style>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications">
+        <!-- 認定資格セクション -->
+        <section id="certifications" class="certifications">
+            <div class="container">
+                <h2 class="section-title animate text-gradient"><span>私の認定資格</span></h2>
+                <p class="section-subtitle animate">専門的な資格と実績</p>
+
+                <div class="certifications-grid">
+                    <div class="certification-card animate">
+                        <div class="certification-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h3>Pythonによる科学計算</h3>
+                        <p>発行元：Freecodecamp ・ 2023年</p>
+                        <a target="_blank"
+                            href="https://www.freecodecamp.org/certification/mohammad_kamran/scientific-computing-with-python-v7"
+                            class="btn btn-small">資格を見る</a>
+                    </div>
+
+                    <div class="certification-card animate">
+                        <div class="certification-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h3>Pythonによるデータ分析</h3>
+                        <p>発行元：Freecodecamp ・ 2023年</p>
+                        <a target="_blank"
+                            href="https://www.freecodecamp.org/certification/mohammad_kamran/data-analysis-with-python-v7"
+                            class="btn btn-small">資格を見る</a>
+                    </div>
+
+                    <div class="certification-card animate">
+                        <div class="certification-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h3>Google デジタルマーケティング</h3>
+                        <p>発行元：Google ・ 2020年</p>
+                        <a target="_blank"
+                            href="https://www.linkedin.com/in/mokamran/details/certifications/1702541704516/single-media-viewer/?type=IMAGE&profileId=ACoAAC-pnmUBZNPYAO6bAepZAN1JRHtpe7qyTGM"
+                            class="btn btn-small">資格を見る</a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2 class="section-title animate text-gradient"><span>私のポートフォリオ</span></h2>
+            <p class="section-subtitle animate">私が担当した厳選されたプロジェクト</p>
+    
+            <div class="portfolio-tabs animate">
+                <button class="tab-btn active" data-tab="all">すべて</button>
+                <button class="tab-btn" data-tab="web">ウェブデザイン</button>
+                <button class="tab-btn" data-tab="ecom">Eコマース</button>
+                <button class="tab-btn" data-tab="other">その他</button>
+            </div>
+    
+            <div class="portfolio-grid">
+                <div class="portfolio-item animate" data-category="web">
+                    <div class="portfolio-image">
+                        <img src="portfolio/estores-experts.png" alt="Eコマースサイト">
+                        <div class="portfolio-overlay">
+                            <h3>エストアーズ・エキスパート</h3>
+                            <p>ビジネスサイト</p>
+                            <a target="_blank" href="https://www.estoresexperts.com" class="portfolio-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="portfolio-item animate" data-category="web">
+                    <div class="portfolio-image">
+                        <img src="portfolio/7-digits-hub.png" alt="Eコマースサイト">
+                        <div class="portfolio-overlay">
+                            <h3>セブン・ディジッツ・ハブ</h3>
+                            <p>ビジネスサイト</p>
+                            <a target="_blank" href="https://7digitshub.com/" class="portfolio-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="portfolio-item animate" data-category="web">
+                    <div class="portfolio-image">
+                        <img src="portfolio/expert-estores.png" alt="Eコマースサイト">
+                        <div class="portfolio-overlay">
+                            <h3>エキスパート・エストアーズ</h3>
+                            <p>ビジネスサイト</p>
+                            <a target="_blank" href="https://www.expertestores.com" class="portfolio-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="portfolio-item animate" data-category="web">
+                    <div class="portfolio-image">
+                        <img src="portfolio/unique-links.png" alt="タスク管理アプリ">
+                        <div class="portfolio-overlay">
+                            <h3>ユニーク・リンクス</h3>
+                            <p>ウェブホスティング会社のサイト</p>
+                            <a target="_blank" href="https://www.unique-links.com.pk/" class="portfolio-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="portfolio-item animate" data-category="ecom">
+                    <div class="portfolio-image">
+                        <img src="portfolio/zoo-bounty.png" alt="オンラインショッピングサイト">
+                        <div class="portfolio-overlay">
+                            <h3>ズー・バウンティ</h3>
+                            <p>オンラインショッピングサイト</p>
+                            <a target="_blank" href="https://zoo-bounty.com/" class="portfolio-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="portfolio-item animate" data-category="web">
+                    <div class="portfolio-image">
+                        <img src="portfolio/global-travel-wide.png" alt="企業ウェブサイト">
+                        <div class="portfolio-overlay">
+                            <h3>グローバル・トラベル・ワイド</h3>
+                            <p>旅行代理店のウェブサイト</p>
+                            <a target="_blank" href="https://globaltravelwide.co.uk/" class="portfolio-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="portfolio-item animate" data-category="web">
+                    <div class="portfolio-image">
+                        <img src="portfolio/swif-sol.png" alt="デジタルマーケティング">
+                        <div class="portfolio-overlay">
+                            <h3>スウィフ・ソル</h3>
+                            <p>デジタルマーケティング会社のサイト</p>
+                            <a target="_blank" href="https://swifsol.com/" class="portfolio-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="portfolio-item animate" data-category="web">
+                    <div class="portfolio-image">
+                        <img src="portfolio/reblate-sols.png" alt="代理店ウェブサイト">
+                        <div class="portfolio-overlay">
+                            <h3>リブレート・ソリューションズ</h3>
+                            <p>エージェンシーサイト</p>
+                            <a target="_blank" href="https://swifsol.com/" class="portfolio-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="portfolio-item animate" data-category="web">
+                    <div class="portfolio-image">
+                        <img src="portfolio/crm-reblate.png" alt="CRMシステム">
+                        <div class="portfolio-overlay">
+                            <h3>会社CRMプロジェクト</h3>
+                            <p>JavaScript + Laravel ウェブアプリ</p>
+                            <a target="_blank" href="https://crm.reblatesols.com/login" class="portfolio-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="portfolio-item animate" data-category="other">
+                    <div class="portfolio-image">
+                        <img src="portfolio/firex.png" alt="Unityプロジェクト">
+                        <div class="portfolio-overlay">
+                            <h3>Firex Unityプロジェクト</h3>
+                            <p>Unity & C# 卒業制作</p>
+                            <a target="_blank"
+                                href="https://www.linkedin.com/posts/mokamran_finalyearproject-indiegame-gamedevlife-activity-7143562652156420096-nOJh?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAC-pnmUBZNPYAO6bAepZAN1JRHtpe7qyTGM"
+                                class="portfolio-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+
+
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2 class="section-title animate text-gradient"><span>イメージギャラリー</span></h2>
+            <p class="section-subtitle animate">インスピレーションを求めて世界を探索</p>
+    
+            <div class="gallery-grid">
+                <div class="gallery-item animate">
+                    <img src="gallary/cat-island.jpg" alt="猫島の風景">
+                    <div class="gallery-overlay">
+                        <h3>猫島（日本）</h3>
+                    </div>
+                </div>
+    
+                <div class="gallery-item animate">
+                    <img src="gallary/flower.jpg" alt="花祭り">
+                    <div class="gallery-overlay">
+                        <h3>花祭り</h3>
+                    </div>
+                </div>
+    
+                <div class="gallery-item animate">
+                    <img src="gallary/freinds-2.jpg" alt="友達との外出">
+                    <div class="gallery-overlay">
+                        <h3>友達との外出</h3>
+                    </div>
+                </div>
+    
+                <div class="gallery-item animate">
+                    <img src="gallary/friends.jpg" alt="友達との外出">
+                    <div class="gallery-overlay">
+                        <h3>友達との外出</h3>
+                    </div>
+                </div>
+    
+                <div class="gallery-item animate">
+                    <img src="gallary/fukuoka-2.jpg" alt="福岡の景色">
+                    <div class="gallery-overlay">
+                        <h3>福岡</h3>
+                    </div>
+                </div>
+                <div class="gallery-item animate">
+                    <img src="gallary/fukuoka-temple.jpg" alt="福岡の神社">
+                    <div class="gallery-overlay">
+                        <h3>福岡の神社</h3>
+                    </div>
+                </div>
+                <div class="gallery-item animate">
+                    <img src="gallary/japan-science.jpg" alt="日本科学博物館">
+                    <div class="gallery-overlay">
+                        <h3>日本科学博物館</h3>
+                    </div>
+                </div>
+                <div class="gallery-item animate">
+                    <img src="gallary/japan-village.jpg" alt="日本の村">
+                    <div class="gallery-overlay">
+                        <h3>日本の村</h3>
+                    </div>
+                </div>
+                <div class="gallery-item animate">
+                    <img src="gallary/japan.jpg" alt="日本の風景">
+                    <div class="gallery-overlay">
+                        <h3>日本</h3>
+                    </div>
+                </div>
+                <div class="gallery-item animate">
+                    <img src="gallary/onga.jpg" alt="遠賀川（日本）">
+                    <div class="gallery-overlay">
+                        <h3>遠賀川（日本）</h3>
+                    </div>
+                </div>
+                <div class="gallery-item animate">
+                    <img src="gallary/sea-2.jpg" alt="日本の海">
+                    <div class="gallery-overlay">
+                        <h3>日本の海</h3>
+                    </div>
+                </div>
+                <div class="gallery-item animate">
+                    <img src="gallary/sea.jpg" alt="日本の海">
+                    <div class="gallery-overlay">
+                        <h3>日本の海</h3>
+                    </div>
+                </div>
+                <div class="gallery-item animate">
+                    <img src="gallary/sea-3.jpg" alt="日本の海">
+                    <div class="gallery-overlay">
+                        <h3>日本の海</h3>
+                    </div>
+                </div>
+                <div class="gallery-item animate">
+                    <img src="gallary/tokyo.jpg" alt="東京の風景">
+                    <div class="gallery-overlay">
+                        <h3>東京</h3>
+                    </div>
+                </div>
+                <div class="gallery-item animate">
+                    <img src="gallary/tokyo.jpg" alt="東京の風景">
+                    <div class="gallery-overlay">
+                        <h3>東京</h3>
+                    </div>
+                </div>
+                <div class="gallery-item animate">
+                    <img src="gallary/tokyo-2.jpg" alt="東京の風景">
+                    <div class="gallery-overlay">
+                        <h3>東京</h3>
+                    </div>
+                </div>
+                <div class="gallery-item animate">
+                    <img src="gallary/tokyo-3.jpg" alt="東京の風景">
+                    <div class="gallery-overlay">
+                        <h3>東京</h3>
+                    </div>
+                </div>
+                <div class="gallery-item animate">
+                    <img src="gallary/tokyo-match.jpg" alt="東京サッカーの試合">
+                    <div class="gallery-overlay">
+                        <h3>東京サッカーの試合</h3>
+                    </div>
+                </div>
+                <div class="gallery-item animate">
+                    <img src="gallary/ukk-uni.jpg" alt="北九州市立大学">
+                    <div class="gallery-overlay">
+                        <h3>北九州市立大学</h3>
+                    </div>
+                </div>
+                <div class="gallery-item animate">
+                    <img src="gallary/ukk-2.jpg" alt="北九州市立大学">
+                    <div class="gallery-overlay">
+                        <h3>北九州市立大学</h3>
+                    </div>
+                </div>
+                <div class="gallery-item animate">
+                    <img src="gallary/ukk-3.jpg" alt="北九州市立大学">
+                    <div class="gallery-overlay">
+                        <h3>北九州市立大学</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- language change button  -->
+    <div class="language-buttons">
+        <a href="/portfolio/index.html">
+          <img src="https://flagcdn.com/us.svg" alt="US Flag"> English
+        </a>
+        <!-- <a href="/jp">
+            <img src="https://flagcdn.com/jp.svg" alt="Japan Flag"> 日本語
+        </a> -->
+    </div>
+
+    <style>
+        .language-buttons {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 15px;
+            z-index: 1000;
+        }
+
+        .language-buttons a {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: #f9f9f9;
+            color: #333;
+            text-decoration: none;
+            padding: 10px 18px;
+            border-radius: 25px;
+            font-weight: bold;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+            transition: background 0.2s;
+        }
+
+        .language-buttons a:hover {
+            background: #eaeaea;
+        }
+
+        .language-buttons img {
+            width: 24px;
+            height: 16px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+    </style>
+
+
+
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title animate text-gradient"><span>お問い合わせ</span></h2>
+            <p class="section-subtitle animate">一緒にお仕事しましょう！</p>
+    
+            <div class="contact-content">
+                <div class="contact-info animate">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>所在地</h3>
+                            <p>福岡、日本</p>
+                        </div>
+                    </div>
+    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>メール</h3>
+                            <p>mohammadkamran1515@gmail.com</p>
+                        </div>
+                    </div>
+    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>電話番号</h3>
+                            <p>近日公開予定</p>
+                        </div>
+                    </div>
+    
+                    <div class="contact-social">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://x.com/being_m_kamran" target="_blank" class="social-link"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/in/mokamran/" target="_blank" class="social-link"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/mohakamran" target="_blank" class="social-link"><i
+                                class="fab fa-github"></i></a>
+                        <a href="https://www.youtube.com/@muhkamran1034" target="_blank" class="social-link"><i
+                                class="fab fa-youtube"></i></a>
+                        <a href="https://instagram.com/being_m_kamran" target="_blank" class="social-link"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://tiktok.com/@mohammad_kamran_" target="_blank" class="social-link"><i
+                                class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+    
+                <!-- Alternative for Contact Form -->
+                <div class="contact-form animate"
+                    style="background-color: rgba(255,255,255,0.9); border-radius:10px; padding:30px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align:center;">
+                    <h3 style="margin-bottom:20px;">コラボレーション、プロジェクト、ディスカッションを歓迎します！</h3>
+                    <p style="margin-bottom:30px; color: var(--gray-color);">メールでお気軽にご連絡ください。一緒に素晴らしいものを作りましょう！</p>
+                    <a href="mailto:mohammadkamran1515@gmail.com" class="btn btn-primary">メールを送る</a>
+                </div>
+    
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Google Translate Element (hidden) -->
+    <div id="google_translate_element" style="display:none;"></div>
+
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="logo">
+                        <span class="logo-text text-gradient">カムラン・ムハンマド</span>
+                        <span class="logo-dot">.</span>
+                    </div>
+                    <p>経験豊富なウェブ開発者で、生涯学習者です</p>
+                </div>
+    
+                <div class="footer-links">
+                    <h3>クイックリンク</h3>
+                    <ul>
+                        <li><a href="#home">ホーム</a></li>
+                        <li><a href="#timeline-section">学歴</a></li>
+                        <li><a href="#skills">スキル</a></li>
+                        <li><a href="#portfolio">ポートフォリオ</a></li>
+                        <li><a href="#contact">お問い合わせ</a></li>
+                    </ul>
+                </div>
+    
+                <div class="footer-links">
+                    <h3>サービス</h3>
+                    <ul>
+                        <li><a href="#">ウェブデザイン＆開発</a></li>
+                        <!-- <li><a href="#">ウェブデザイン</a></li> -->
+                        <li><a href="#">Eコマース開発</a></li>
+                        <li><a href="#">ランディングページ</a></li>
+                        <!-- <li><a href="#">ワードプレス開発</a></li> -->
+                        <!-- <li><a href="#">ポートフォリオウェブサイト</a></li> -->
+                        <li><a href="#">ビジネスウェブサイト</a></li>
+                        <li><a href="#">ウェブサイトメンテナンス</a></li>
+                        <!-- <li><a href="#">スピード最適化</a></li> -->
+                        <li><a href="#">API統合</a></li>
+                        <!-- <li><a href="#">サーバー管理</a></li> -->
+                    </ul>
+                </div>
+    
+                <div class="footer-newsletter">
+                    <h3>ニュースレター</h3>
+                    <p>最新プロジェクトの情報を受け取るためにご登録ください。</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="メールアドレス">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+    
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <a href="#">プライバシーポリシー</a>
+                    <a href="#">利用規約</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+
+    <!-- Back to Top Button -->
+    <a href="#home" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- <div class="gtranslate_wrapper"></div>
+    <script>window.gtranslateSettings = { "default_language": "en", "languages": ["en", "ar", "ja", "ur"], "wrapper_selector": ".gtranslate_wrapper" }</script>
+    <script src="https://cdn.gtranslate.net/widgets/latest/dwf.js" defer></script> -->
+
+    <!-- Elfsight Website Translator | lang-translator -->
+    <!-- <script src="https://static.elfsight.com/platform/platform.js" async></script>
+<div class="elfsight-app-aaf479f7-87d8-4a0d-a41b-490ec6e35de2" data-elfsight-app-lazy></div>  -->
+    <!-- 
+    <div id="language-switcher" class="language-switcher">
+        <button id="translate-button">
+            <img src="https://flagcdn.com/jp.svg" width="20" id="current-flag" alt="Flag">
+            <span id="current-language">日本語</span>
+        </button>
+        <div class="language-dropdown">
+            <a href="#" data-lang="en" data-flag="https://flagcdn.com/us.svg">🇺🇸 English</a>
+            <a href="#" data-lang="ja" data-flag="https://flagcdn.com/jp.svg">🇯🇵 日本語</a>
+        </div>
+    </div> -->
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
