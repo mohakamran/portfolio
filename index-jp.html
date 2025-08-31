@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MK - ポートフォリオ</title>
+  <link rel="icon" href="gallary/web.png" type="image/svg+xml">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Hero tech blobs background */
+    .blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(100px);
+      opacity: 0.3;
+      animation: float 15s ease-in-out infinite;
+      z-index: 0;
+    }
+
+    #typewriter-container {
+      min-width: 240px;
+      /* set to widest text length */
+      height: 1.2em;
+      /* reserve height so text doesn't push content */
+    }
+
+
+    .blob1 {
+      width: 400px;
+      height: 400px;
+      background: linear-gradient(135deg, #14B8A6, #0EA5E9);
+      top: -100px;
+      left: -100px;
+    }
+
+    .blob2 {
+      width: 300px;
+      height: 300px;
+      background: linear-gradient(135deg, #FACC15, #F43F5E);
+      bottom: -50px;
+      right: -50px;
+      animation-delay: 5s;
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0) translateX(0);
+      }
+
+      50% {
+        transform: translateY(-30px) translateX(30px);
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-gray-900 text-white">
+
+  <!-- ===== HEADER ===== -->
+  <header class="fixed w-full top-0 z-50 bg-gray-900/90 backdrop-blur-md shadow">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="text-2xl font-bold text-teal-400">ムハマド・カムラン</div> <!-- Muhammad Kamran (Muhamado Kamuran) -->
+
+      <nav class="hidden md:flex space-x-6">
+        <a href="#home" class="hover:text-teal-400">ホーム</a> <!-- Home (Hōmu) -->
+        <a href="#skills" class="hover:text-teal-400">スキル</a> <!-- Skills (Sukiru) -->
+        <a href="#education" class="hover:text-teal-400">学歴</a> <!-- Education (Gakureki) -->
+        <a href="#certifications" class="hover:text-teal-400">認定資格</a> <!-- Certifications (Nintei shikaku) -->
+        <a href="#portfolio" class="hover:text-teal-400">ポートフォリオ</a> <!-- Portfolio (Pōtoforio) -->
+        <a href="#gallery" class="hover:text-teal-400">ギャラリー</a> <!-- Gallery (Gyararī) -->
+        <a href="#contact" class="hover:text-teal-400">お問い合わせ</a> <!-- Contact (O-toiawase) -->
+      </nav>
+
+
+      <button id="menu-toggle" class="md:hidden p-2 rounded-md bg-gray-800 hover:bg-gray-700">☰</button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-gray-800 px-6 py-4 space-y-2">
+      <a href="#home" class="block hover:text-teal-400">ホーム</a>
+      <a href="#skills" class="block hover:text-teal-400">スキル</a>
+      <a href="#education" class="block hover:text-teal-400">教育</a>
+      <a href="#certifications" class="block hover:text-teal-400">認定資格</a>
+      <a href="#portfolio" class="block hover:text-teal-400">ポートフォリオ</a>
+      <a href="#gallery" class="block hover:text-teal-400">ギャラリー</a>
+      <a href="#contact" class="block hover:text-teal-400">連絡先</a>
+    </div>
+
+  </header>
+
+  <!-- ===== HERO SECTION ===== -->
+  <!-- ===== HERO SECTION ===== -->
+  <section id="home" class="relative min-h-screen flex items-center justify-center pt-28 sm:pt-32 overflow-hidden">
+    <!-- Background Blobs -->
+    <div class="blob blob1"></div>
+    <div class="blob blob2"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-10 items-center relative z-10">
+      <!-- Left Text -->
+      <div>
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4 flex flex-wrap md:flex-nowrap items-center">
+          <span>私は&nbsp;</span>
+          <span id="typewriter-container"
+            class="relative inline-block md:inline md:relative min-w-[10ch] md:min-w-0 h-[1.2em]">
+            <span id="typewriter" class="absolute md:static left-0 top-0 whitespace-nowrap"></span>
+          </span>
+        </h1>
+
+        <p class="text-gray-300 text-base sm:text-lg leading-relaxed mb-4">
+          ムハンマド・カムラン、パキスタン出身のソフトウェアエンジニア。<span class="text-teal-400">PHP
+            Laravel、JavaScript、WordPress、Shopify、React</span>の専門家。世界中のクライアントのオンラインプレゼンス最適化を支援。
+        </p>
+        <p class="text-gray-300 text-base sm:text-lg leading-relaxed mb-6">
+          現在、日本で応用情報システムの修士課程を履修中。研究分野: <span class="text-teal-400">交通シミュレーション & 心理学</span>。
+        </p>
+        <div class="flex gap-4 flex-wrap">
+          <a href="cv-english.pdf"
+            class="px-5 py-2 sm:px-6 sm:py-3 bg-teal-500 hover:bg-teal-600 rounded-full text-white font-medium flex items-center gap-2 transition">
+            📄 英語履歴書
+          </a>
+          <a href="cv-japanese.pdf"
+            class="px-5 py-2 sm:px-6 sm:py-3 bg-gray-700 hover:bg-gray-600 rounded-full text-white font-medium flex items-center gap-2 transition">
+            📄 日本語履歴書
+          </a>
+        </div>
+      </div>
+
+
+      <!-- Right Image -->
+      <div class="flex justify-center md:justify-end mt-8 md:mt-0">
+        <img src="gallary/heading.jpg" alt="Tech Illustration" class="rounded-2xl shadow-lg w-full max-w-sm">
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="py-16 bg-gray-900 text-white">
+    <div class="container mx-auto px-6">
+      <!-- Section Heading -->
+      <h2 class="text-3xl font-bold text-center mb-4 text-primary">
+        スキル
+      </h2>
+      <p class="text-center text-white mb-12">習得している技術 & ツール</p>
+
+      <!-- Skills Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+        <!-- WordPress -->
+        <div class="skill-card bg-gray-800 rounded-xl p-6 shadow-md flex items-center space-x-4">
+          <img src="https://cdn.worldvectorlogo.com/logos/wordpress-icon-1.svg" alt="WordPress" class="w-12 h-12">
+          <div class="w-full">
+            <h4 class="font-semibold">WordPress</h4>
+            <div class="w-full bg-gray-700 h-2 rounded-full mt-2">
+              <div class="bg-gradient-to-r from-blue-400 to-purple-500 h-2 rounded-full" style="width:90%"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- HTML5 -->
+        <div class="skill-card bg-gray-800 rounded-xl p-6 shadow-md flex items-center space-x-4">
+          <i class="fab fa-html5 text-orange-500 text-4xl"></i>
+          <div class="w-full">
+            <h4 class="font-semibold">HTML5</h4>
+            <div class="w-full bg-gray-700 h-2 rounded-full mt-2">
+              <div class="bg-orange-500 h-2 rounded-full" style="width:95%"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CSS3 -->
+        <div class="skill-card bg-gray-800 rounded-xl p-6 shadow-md flex items-center space-x-4">
+          <i class="fab fa-css3-alt text-blue-400 text-4xl"></i>
+          <div class="w-full">
+            <h4 class="font-semibold">CSS3</h4>
+            <div class="w-full bg-gray-700 h-2 rounded-full mt-2">
+              <div class="bg-blue-400 h-2 rounded-full" style="width:90%"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- JavaScript -->
+        <div class="skill-card bg-gray-800 rounded-xl p-6 shadow-md flex items-center space-x-4">
+          <i class="fab fa-js-square text-yellow-400 text-4xl"></i>
+          <div class="w-full">
+            <h4 class="font-semibold">JavaScript</h4>
+            <div class="w-full bg-gray-700 h-2 rounded-full mt-2">
+              <div class="bg-yellow-400 h-2 rounded-full" style="width:85%"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- React -->
+        <div class="skill-card bg-gray-800 rounded-xl p-6 shadow-md flex items-center space-x-4">
+          <i class="fab fa-react text-cyan-400 text-4xl"></i>
+          <div class="w-full">
+            <h4 class="font-semibold">React</h4>
+            <div class="w-full bg-gray-700 h-2 rounded-full mt-2">
+              <div class="bg-cyan-400 h-2 rounded-full" style="width:80%"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tailwind -->
+        <div class="skill-card bg-gray-800 rounded-xl p-6 shadow-md flex items-center space-x-4">
+          <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="Tailwind"
+            class="w-12 h-12">
+          <div class="w-full">
+            <h4 class="font-semibold">Tailwind CSS</h4>
+            <div class="w-full bg-gray-700 h-2 rounded-full mt-2">
+              <div class="bg-sky-400 h-2 rounded-full" style="width:85%"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Shopify -->
+        <div class="skill-card bg-gray-800 rounded-xl p-6 shadow-md flex items-center space-x-4">
+          <img src="https://cdn.worldvectorlogo.com/logos/shopify.svg" alt="Shopify" class="w-12 h-12">
+          <div class="w-full">
+            <h4 class="font-semibold">Shopify</h4>
+            <div class="w-full bg-gray-700 h-2 rounded-full mt-2">
+              <div class="bg-green-400 h-2 rounded-full" style="width:90%"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Laravel -->
+        <div class="skill-card bg-gray-800 rounded-xl p-6 shadow-md flex items-center space-x-4">
+          <img src="https://cdn.worldvectorlogo.com/logos/laravel-2.svg" alt="Laravel" class="w-12 h-12">
+          <div class="w-full">
+            <h4 class="font-semibold">Laravel</h4>
+            <div class="w-full bg-gray-700 h-2 rounded-full mt-2">
+              <div class="bg-red-400 h-2 rounded-full" style="width:78%"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Unity -->
+        <div class="skill-card bg-gray-800 rounded-xl p-6 shadow-md flex items-center space-x-4">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/Unity_2021.svg" alt="Unity" class="w-12 h-12">
+          <div class="w-full">
+            <h4 class="font-semibold">Unity</h4>
+            <div class="w-full bg-gray-700 h-2 rounded-full mt-2">
+              <div class="bg-white h-2 rounded-full" style="width:40%"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Unreal -->
+        <div class="skill-card bg-gray-800 rounded-xl p-6 shadow-md flex items-center space-x-4">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Unreal_Engine_Logo.svg" alt="Unreal Engine"
+            class="w-12 h-12">
+          <div class="w-full">
+            <h4 class="font-semibold">Unreal Engine</h4>
+            <div class="w-full bg-gray-700 h-2 rounded-full mt-2">
+              <div class="bg-gray-300 h-2 rounded-full" style="width:35%"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Python -->
+        <div class="skill-card bg-gray-800 rounded-xl p-6 shadow-md flex items-center space-x-4">
+          <i class="fab fa-python text-blue-300 text-4xl"></i>
+          <div class="w-full">
+            <h4 class="font-semibold">Python</h4>
+            <div class="w-full bg-gray-700 h-2 rounded-full mt-2">
+              <div class="bg-blue-300 h-2 rounded-full" style="width:88%"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- NumPy -->
+        <div class="skill-card bg-gray-800 rounded-xl p-6 shadow-md flex items-center space-x-4">
+          <img src="https://numpy.org/images/logo.svg" alt="NumPy" class="w-12 h-12">
+          <div class="w-full">
+            <h4 class="font-semibold">NumPy</h4>
+            <div class="w-full bg-gray-700 h-2 rounded-full mt-2">
+              <div class="bg-indigo-400 h-2 rounded-full" style="width:70%"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pandas -->
+        <div class="skill-card bg-gray-800 rounded-xl p-6 shadow-md flex items-center space-x-4">
+          <img src="https://pandas.pydata.org/static/img/pandas_white.svg" alt="Pandas" class="w-14 h-14">
+          <div class="w-full">
+            <h4 class="font-semibold">Pandas</h4>
+            <div class="w-full bg-gray-700 h-2 rounded-full mt-2">
+              <div class="bg-purple-400 h-2 rounded-full" style="width:75%"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Matplotlib -->
+        <div class="skill-card bg-gray-800 rounded-xl p-6 shadow-md flex items-center space-x-4">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Matplotlib_icon.svg" alt="Matplotlib"
+            class="w-14 h-14">
+          <div class="w-full">
+            <h4 class="font-semibold">Matplotlib</h4>
+            <div class="w-full bg-gray-700 h-2 rounded-full mt-2">
+              <div class="bg-yellow-300 h-2 rounded-full" style="width:65%"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Seaborn -->
+        <div class="skill-card bg-gray-800 rounded-xl p-6 shadow-md flex items-center space-x-4">
+          <img src="https://seaborn.pydata.org/_images/logo-mark-lightbg.svg" alt="Seaborn" class="w-14 h-14">
+          <div class="w-full">
+            <h4 class="font-semibold">Seaborn</h4>
+            <div class="w-full bg-gray-700 h-2 rounded-full mt-2">
+              <div class="bg-teal-400 h-2 rounded-full" style="width:60%"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Git -->
+        <div class="skill-card bg-gray-800 rounded-xl p-6 shadow-md flex items-center space-x-4">
+          <i class="fab fa-git-alt text-red-500 text-4xl"></i>
+          <div class="w-full">
+            <h4 class="font-semibold">Git</h4>
+            <div class="w-full bg-gray-700 h-2 rounded-full mt-2">
+              <div class="bg-red-500 h-2 rounded-full" style="width:80%"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Docker -->
+        <div class="skill-card bg-gray-800 rounded-xl p-6 shadow-md flex items-center space-x-4">
+          <i class="fab fa-docker text-sky-400 text-4xl"></i>
+          <div class="w-full">
+            <h4 class="font-semibold">Docker</h4>
+            <div class="w-full bg-gray-700 h-2 rounded-full mt-2">
+              <div class="bg-sky-400 h-2 rounded-full" style="width:70%"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- VS Code -->
+        <div class="skill-card bg-gray-800 rounded-xl p-6 shadow-md flex items-center space-x-4">
+          <img src="https://cdn.worldvectorlogo.com/logos/visual-studio-code-1.svg" alt="VS Code" class="w-12 h-12">
+          <div class="w-full">
+            <h4 class="font-semibold">VS Code</h4>
+            <div class="w-full bg-gray-700 h-2 rounded-full mt-2">
+              <div class="bg-indigo-300 h-2 rounded-full" style="width:90%"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== EDUCATION & EXPERIENCE SECTION ===== -->
+  <section id="education" class="py-16 bg-gray-900 text-white">
+    <div class="container mx-auto px-6">
+
+      <!-- Section Heading -->
+      <h2
+        class="text-3xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-purple-500">
+        学歴 & 職務経験
+      </h2>
+
+      <div class="grid md:grid-cols-2 gap-10">
+
+        <!-- Education Column -->
+        <div class="relative pl-8">
+          <h3 class="text-2xl font-semibold mb-6 text-teal-400">学歴</h3>
+
+          <div class="absolute top-0 left-4 h-full w-1 bg-teal-400"></div> <!-- Vertical line -->
+
+          <!-- Education Item 1 -->
+          <div class="mb-10 relative pl-8">
+            <div class="absolute -left-5 top-1 bg-teal-400 w-4 h-4 rounded-full border-2 border-gray-900"></div>
+            <h4 class="text-xl font-bold">応用情報システム 修士</h4>
+            <p class="text-gray-400 italic">北九州市立大学, 福岡,日本</p>
+            <p class="text-gray-300 mt-2">交通シミュレーションシステムと心理学に注力</p>
+            <span class="text-gray-500 text-sm mt-1 block">2024年10月 - 2026年9月</span>
+          </div>
+
+          <!-- Education Item 2 -->
+          <div class="mb-10 relative pl-8">
+            <div class="absolute -left-5 top-1 bg-teal-400 w-4 h-4 rounded-full border-2 border-gray-900"></div>
+            <h4 class="text-xl font-bold">情報技術学士</h4>
+            <p class="text-gray-400 italic">グジュラート大学 (GPGC), ジェラム</p>
+            <p class="text-gray-300 mt-2">フルスタック開発 & ソフトウェアアーキテクチャに注力</p>
+            <span class="text-gray-500 text-sm mt-1 block">2016年9月 - 2020年11月</span>
+          </div>
+        </div>
+
+        <!-- Work Experience Column -->
+        <div class="relative pl-8">
+          <h3 class="text-2xl font-semibold mb-6 text-teal-400">職務経験</h3>
+
+          <div class="absolute top-0 left-4 h-full w-1 bg-teal-400"></div> <!-- Vertical line -->
+
+          <!-- Experience Item 1 -->
+          <div class="mb-10 relative pl-8">
+            <div class="absolute -left-5 top-1 bg-teal-400 w-4 h-4 rounded-full border-2 border-gray-900"></div>
+            <h4 class="text-xl font-bold">フルスタックエンジニア</h4>
+            <p class="text-gray-400 italic">Reblate Solutions</p>
+            <p class="text-gray-300 mt-2">
+              フルスタックエンジニアとして勤務。主に PHP, React, JavaScript, Laravel, WordPress, Shopify を使用。
+            </p>
+            <span class="text-gray-500 text-sm mt-1 block">2022年1月 - 2024年8月</span>
+            <p class="text-gray-300 mt-1 text-sm">スキル: PHP, JavaScript, CSS3, WordPress, React</p>
+          </div>
+
+          <!-- Experience Item 2 -->
+          <div class="mb-10 relative pl-8">
+            <div class="absolute -left-5 top-1 bg-teal-400 w-4 h-4 rounded-full border-2 border-gray-900"></div>
+            <h4 class="text-xl font-bold">コンピュータ教師</h4>
+            <p class="text-gray-400 italic">Computer City</p>
+            <p class="text-gray-300 mt-2">コンピュータ教師として勤務</p>
+            <span class="text-gray-500 text-sm mt-1 block">2020年11月 - 2021年12月</span>
+            <p class="text-gray-300 mt-1 text-sm">スキル: デジタルマーケティング, Webデザイン & 開発, ECサイト運営, ビデオ編集</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="certifications" class="py-16 bg-gray-900 text-white">
+    <div class="container mx-auto px-6">
+      <!-- Section Heading -->
+      <h2 class="text-3xl font-bold text-center mb-4 text-primary">
+        保有資格
+      </h2>
+      <p class="text-center text-white mb-12"></p>
+
+      <!-- Certification -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <div class="skill-card bg-gray-800 rounded-xl p-6 shadow-md flex flex-col items-center">
+          <i class="fas fa-award text-3xl mb-4"></i>
+          <h4 class="mb-2 font-semibold text-center">Pythonによる科学計算</h4>
+          <p class="mb-2 text-white text-center">発行元: Freecodecamp • 2023</p>
+          <p class=" mt-2 text-white text-center"><a target="_blank"
+              href="https://www.freecodecamp.org/certification/mohammad_kamran/scientific-computing-with-python-v7">資格を見る</a>
+          </p>
+        </div>
+
+        <div class="skill-card bg-gray-800 rounded-xl p-6 shadow-md flex flex-col items-center">
+          <i class="fas fa-award text-3xl mb-4"></i>
+          <h4 class="mb-2 font-semibold text-center">Pythonによるデータ分析</h4>
+          <p class="mb-2 text-white text-center">発行元: Freecodecamp • 2023</p>
+          <p class=" mt-2 text-white text-center"><a target="_blank"
+              href="https://www.freecodecamp.org/certification/mohammad_kamran/data-analysis-with-python-v7">資格を見る</a>
+          </p>
+        </div>
+
+        <div class="skill-card bg-gray-800 rounded-xl p-6 shadow-md flex flex-col items-center">
+          <i class="fas fa-award text-3xl mb-4"></i>
+          <h4 class="mb-2 font-semibold text-center">Google デジタルマーケティング</h4>
+          <p class="mb-2 text-white text-center">発行元: Google • 2023</p>
+          <p class=" mt-2 text-white text-center"><a target="_blank" href="google_digital_marketing.jpeg">資格を見る</a></p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== PORTFOLIO SECTION ===== -->
+  <!-- ===== PORTFOLIO SECTION ===== -->
+  <section id="portfolio" class="py-16 bg-gray-900 text-white">
+    <div class="container mx-auto px-6">
+
+      <!-- Section Heading -->
+      <h2
+        class="text-3xl font-bold text-center mb-2 bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-purple-500">
+        ポートフォリオ
+      </h2>
+      <p class="text-center text-gray-400 mb-12">私のWeb開発・デザインプロジェクトの一部</p>
+
+      <!-- Filter Buttons -->
+      <div class="flex justify-center mb-10 gap-4 flex-wrap">
+        <button
+          class="filter-btn px-6 py-2 rounded-full bg-gray-800 hover:bg-gradient-to-r hover:from-teal-400 hover:to-teal-500 transition"
+          data-filter="all">すべて</button>
+        <button
+          class="filter-btn px-6 py-2 rounded-full bg-gray-800 hover:bg-gradient-to-r hover:from-teal-400 hover:to-teal-500 transition"
+          data-filter="web">ウェブデザイン</button>
+        <button
+          class="filter-btn px-6 py-2 rounded-full bg-gray-800 hover:bg-gradient-to-r hover:from-teal-400 hover:to-teal-500 transition"
+          data-filter="ecommerce">Eコマース</button>
+        <button
+          class="filter-btn px-6 py-2 rounded-full bg-gray-800 hover:bg-gradient-to-r hover:from-teal-400 hover:to-teal-500 transition"
+          data-filter="other">その他</button>
+      </div>
+
+      <!-- Portfolio Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Estores Experts -->
+        <div class="portfolio-card relative bg-gray-800 rounded-xl overflow-hidden shadow-md" data-category="web">
+          <img src="portfolio/estores-experts.png" alt="Estores Experts" class="w-full h-64 object-cover">
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-teal-500/80 via-teal-400/60 to-teal-300/30 flex flex-col justify-end p-4 opacity-0 hover:opacity-100 transition">
+            <h4 class="text-lg font-semibold text-white">Estores Experts</h4>
+            <p class="text-gray-200 text-sm">ビジネス用ウェブサイト</p>
+            <a target="_blank" href="https://www.estoresexperts.com" class="text-white underline text-sm">見る</a>
+          </div>
+        </div>
+
+        <!-- 7 Digits Hub -->
+        <div class="portfolio-card relative bg-gray-800 rounded-xl overflow-hidden shadow-md" data-category="web">
+          <img src="portfolio/7-digits-hub.png" alt="7 Digits Hub" class="w-full h-64 object-cover">
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-teal-500/80 via-teal-400/60 to-teal-300/30 flex flex-col justify-end p-4 opacity-0 hover:opacity-100 transition">
+            <h4 class="text-lg font-semibold text-white">7 Digits Hub</h4>
+            <p class="text-gray-200 text-sm">ビジネス用ウェブサイト</p>
+            <a target="_blank" href="https://7digitshub.com/" class="text-white underline text-sm">見る</a>
+          </div>
+        </div>
+
+        <!-- Expert Estores -->
+        <div class="portfolio-card relative bg-gray-800 rounded-xl overflow-hidden shadow-md" data-category="web">
+          <img src="portfolio/expert-estores.png" alt="Expert Estores" class="w-full h-64 object-cover">
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-teal-500/80 via-teal-400/60 to-teal-300/30 flex flex-col justify-end p-4 opacity-0 hover:opacity-100 transition">
+            <h4 class="text-lg font-semibold text-white">Expert Estores</h4>
+            <p class="text-gray-200 text-sm">ビジネス用ウェブサイト</p>
+            <a target="_blank" href="https://www.expertestores.com" class="text-white underline text-sm">見る</a>
+          </div>
+        </div>
+
+        <!-- Unique Links -->
+        <div class="portfolio-card relative bg-gray-800 rounded-xl overflow-hidden shadow-md" data-category="web">
+          <img src="portfolio/unique-links.png" alt="Unique Links" class="w-full h-64 object-cover">
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-teal-500/80 via-teal-400/60 to-teal-300/30 flex flex-col justify-end p-4 opacity-0 hover:opacity-100 transition">
+            <h4 class="text-lg font-semibold text-white">Unique Links</h4>
+            <p class="text-gray-200 text-sm">ウェブホスティング会社のウェブサイト</p>
+            <a target="_blank" href="https://www.unique-links.com.pk/" class="text-white underline text-sm">見る</a>
+          </div>
+        </div>
+
+        <!-- Zoo Bounty -->
+        <div class="portfolio-card relative bg-gray-800 rounded-xl overflow-hidden shadow-md" data-category="ecommerce">
+          <img src="portfolio/zoo-bounty.png" alt="Zoo Bounty" class="w-full h-64 object-cover">
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-teal-500/80 via-teal-400/60 to-teal-300/30 flex flex-col justify-end p-4 opacity-0 hover:opacity-100 transition">
+            <h4 class="text-lg font-semibold text-white">Zoo Bounty</h4>
+            <p class="text-gray-200 text-sm">オンラインショッピングサイト</p>
+            <a target="_blank" href="https://zoo-bounty.com/" class="text-white underline text-sm">見る</a>
+          </div>
+        </div>
+
+        <!-- Global Travel Wide -->
+        <div class="portfolio-card relative bg-gray-800 rounded-xl overflow-hidden shadow-md" data-category="web">
+          <img src="portfolio/global-travel-wide.png" alt="Global Travel Wide" class="w-full h-64 object-cover">
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-teal-500/80 via-teal-400/60 to-teal-300/30 flex flex-col justify-end p-4 opacity-0 hover:opacity-100 transition">
+            <h4 class="text-lg font-semibold text-white">Global Travel Wide</h4>
+            <p class="text-gray-200 text-sm">旅行代理店ウェブサイト</p>
+            <a target="_blank" href="https://globaltravelwide.co.uk/" class="text-white underline text-sm">見る</a>
+          </div>
+        </div>
+
+        <!-- Swif Sol -->
+        <div class="portfolio-card relative bg-gray-800 rounded-xl overflow-hidden shadow-md" data-category="web">
+          <img src="portfolio/swif-sol.png" alt="Swif Sol" class="w-full h-64 object-cover">
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-teal-500/80 via-teal-400/60 to-teal-300/30 flex flex-col justify-end p-4 opacity-0 hover:opacity-100 transition">
+            <h4 class="text-lg font-semibold text-white">Swif Sol</h4>
+            <p class="text-gray-200 text-sm">デジタルマーケティングエージェンシー</p>
+            <a target="_blank" href="https://swifsol.com/" class="text-white underline text-sm">見る</a>
+          </div>
+        </div>
+
+        <!-- Reblate Solutions -->
+        <div class="portfolio-card relative bg-gray-800 rounded-xl overflow-hidden shadow-md" data-category="web">
+          <img src="portfolio/reblate-sols.png" alt="Reblate Solutions" class="w-full h-64 object-cover">
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-teal-500/80 via-teal-400/60 to-teal-300/30 flex flex-col justify-end p-4 opacity-0 hover:opacity-100 transition">
+            <h4 class="text-lg font-semibold text-white">Reblate Solutions</h4>
+            <p class="text-gray-200 text-sm">エージェンシーのウェブサイト</p>
+            <a target="_blank" href="https://swifsol.com/" class="text-white underline text-sm">見る</a>
+          </div>
+        </div>
+
+        <!-- CRM Reblate -->
+        <div class="portfolio-card relative bg-gray-800 rounded-xl overflow-hidden shadow-md" data-category="web">
+          <img src="portfolio/crm-reblate.png" alt="CRM Reblate" class="w-full h-64 object-cover">
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-teal-500/80 via-teal-400/60 to-teal-300/30 flex flex-col justify-end p-4 opacity-0 hover:opacity-100 transition">
+            <h4 class="text-lg font-semibold text-white">会社CRMプロジェクト</h4>
+            <p class="text-gray-200 text-sm">JavaScript + Laravel ウェブアプリ</p>
+            <a target="_blank" href="https://crm.reblatesols.com/login" class="text-white underline text-sm">見る</a>
+          </div>
+        </div>
+
+        <!-- Firex Project -->
+        <div class="portfolio-card relative bg-gray-800 rounded-xl overflow-hidden shadow-md" data-category="other">
+          <img src="portfolio/firex.png" alt="Firex Unity Project" class="w-full h-64 object-cover">
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-teal-500/80 via-teal-400/60 to-teal-300/30 flex flex-col justify-end p-4 opacity-0 hover:opacity-100 transition">
+            <h4 class="text-lg font-semibold text-white">Firex Unityプロジェクト</h4>
+            <p class="text-gray-200 text-sm">Unity と C# 最終年度プロジェクト</p>
+            <a target="_blank"
+              href="https://www.linkedin.com/posts/mokamran_finalyearproject-indiegame-gamedevlife-activity-7143562652156420096-nOJh?utm_source=social_share_send&amp;utm_medium=member_desktop_web&amp;rcm=ACoAAC-pnmUBZNPYAO6bAepZAN1JRHtpe7qyTGM"
+              class="text-white underline text-sm">見る</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ===== PORTFOLIO FILTER JS ===== -->
+    <script>
+      // Portfolio Filter
+      const filterButtons = document.querySelectorAll(".filter-btn");
+      const portfolioCards = document.querySelectorAll(".portfolio-card");
+
+      filterButtons.forEach(btn => {
+        btn.addEventListener("click", () => {
+          const filter = btn.dataset.filter;
+
+          // Remove active state from all buttons
+          filterButtons.forEach(b => b.classList.remove("bg-gradient-to-r", "from-teal-400", "to-teal-500"));
+          btn.classList.add("bg-gradient-to-r", "from-teal-400", "to-teal-500");
+
+          // Filter cards
+          portfolioCards.forEach(card => {
+            if (filter === "all" || card.dataset.category === filter) {
+              card.classList.remove("hidden");
+            } else {
+              card.classList.add("hidden");
+            }
+          });
+        });
+      });
+    </script>
+  </section>
+
+
+  <!-- ===== SERVICES SECTION ===== -->
+  <section id="services" class="py-16 bg-gray-900 text-white">
+    <div class="container mx-auto px-6">
+
+      <!-- Section Heading -->
+      <h2
+        class="text-3xl font-bold text-center mb-2 bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-purple-500">
+        サービス
+      </h2>
+      <p class="text-center text-gray-400 mb-12">
+        オンラインプレゼンスの構築・最適化・拡張をサポートします
+      </p>
+
+      <!-- Services Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Service Card 1 -->
+        <div
+          class="service-card bg-gray-800 rounded-xl p-6 shadow-lg hover:scale-105 transition transform duration-300 relative overflow-hidden">
+          <div class="text-teal-400 text-4xl mb-4">
+            <i class="fas fa-laptop-code"></i>
+          </div>
+          <h4 class="font-semibold text-xl mb-2">ウェブデザイン & UI/UX</h4>
+          <p class="text-gray-300 text-sm">モダンでレスポンシブ、視覚的に魅力的なウェブサイトを作り、ユーザー体験を最適化します。</p>
+          <div
+            class="absolute inset-0 bg-gradient-to-tr from-teal-400 to-teal-500 opacity-0 hover:opacity-20 transition">
+          </div>
+        </div>
+
+        <!-- Service Card 2 -->
+        <div
+          class="service-card bg-gray-800 rounded-xl p-6 shadow-lg hover:scale-105 transition transform duration-300 relative overflow-hidden">
+          <div class="text-teal-400 text-4xl mb-4">
+            <i class="fas fa-code"></i>
+          </div>
+          <h4 class="font-semibold text-xl mb-2">ウェブ開発</h4>
+          <p class="text-gray-300 text-sm">HTML, CSS, JavaScript, Tailwind, React, PHP,
+            Laravelを使って、高性能で拡張性のあるウェブサイトを構築します。</p>
+          <div
+            class="absolute inset-0 bg-gradient-to-tr from-teal-400 to-teal-500 opacity-0 hover:opacity-20 transition">
+          </div>
+        </div>
+
+        <!-- Service Card 3 -->
+        <div
+          class="service-card bg-gray-800 rounded-xl p-6 shadow-lg hover:scale-105 transition transform duration-300 relative overflow-hidden">
+          <div class="text-teal-400 text-4xl mb-4">
+            <i class="fas fa-shopping-cart"></i>
+          </div>
+          <h4 class="font-semibold text-xl mb-2">Eコマース開発</h4>
+          <p class="text-gray-300 text-sm">Shopify、WooCommerce、その他のプラットフォームを用いて、ビジネスに最適化されたオンラインストアを構築します。</p>
+          <div
+            class="absolute inset-0 bg-gradient-to-tr from-teal-400 to-teal-500 opacity-0 hover:opacity-20 transition">
+          </div>
+        </div>
+
+        <!-- Service Card 4 -->
+        <div
+          class="service-card bg-gray-800 rounded-xl p-6 shadow-lg hover:scale-105 transition transform duration-300 relative overflow-hidden">
+          <div class="text-teal-400 text-4xl mb-4">
+            <i class="fas fa-plug"></i>
+          </div>
+          <h4 class="font-semibold text-xl mb-2">API開発 & 統合</h4>
+          <p class="text-gray-300 text-sm">RESTful APIの設計とサードパーティサービスのシームレスな統合を行います。</p>
+          <div
+            class="absolute inset-0 bg-gradient-to-tr from-teal-400 to-teal-500 opacity-0 hover:opacity-20 transition">
+          </div>
+        </div>
+
+        <!-- Service Card 5 -->
+        <div
+          class="service-card bg-gray-800 rounded-xl p-6 shadow-lg hover:scale-105 transition transform duration-300 relative overflow-hidden">
+          <div class="text-teal-400 text-4xl mb-4">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h4 class="font-semibold text-xl mb-2">データ分析 & 可視化</h4>
+          <p class="text-gray-300 text-sm">Python, Pandas, NumPy, Matplotlib, Seabornを用いてデータを分析・可視化し、実用的なインサイトを提供します。
+          </p>
+          <div
+            class="absolute inset-0 bg-gradient-to-tr from-teal-400 to-teal-500 opacity-0 hover:opacity-20 transition">
+          </div>
+        </div>
+
+        <!-- Service Card 6 -->
+        <div
+          class="service-card bg-gray-800 rounded-xl p-6 shadow-lg hover:scale-105 transition transform duration-300 relative overflow-hidden">
+          <div class="text-teal-400 text-4xl mb-4">
+            <i class="fas fa-vial"></i>
+          </div>
+          <h4 class="font-semibold text-xl mb-2">テスト & 最適化</h4>
+          <p class="text-gray-300 text-sm">厳格なテストと最適化手法を通じて、ウェブサイトのパフォーマンス、レスポンシブ性、品質を保証します。</p>
+          <div
+            class="absolute inset-0 bg-gradient-to-tr from-teal-400 to-teal-500 opacity-0 hover:opacity-20 transition">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== PRICING SECTION ===== -->
+  <!-- ===== PRICING SECTION ===== -->
+  <section id="pricing" class="py-16 bg-gray-900 text-white">
+    <div class="container mx-auto px-6">
+
+      <!-- Section Heading -->
+      <h2
+        class="text-3xl font-bold text-center mb-2 bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-purple-500">
+        料金プラン
+      </h2>
+      <p class="text-center text-gray-400 mb-12">
+        ご要望に合わせたお手頃なパッケージ、安心のサポート付き
+      </p>
+
+      <!-- Pricing Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+
+        <!-- Web Design -->
+        <div
+          class="pricing-card bg-gray-800 rounded-xl p-8 shadow-lg hover:scale-105 transition transform duration-300 relative overflow-hidden">
+          <div class="text-2xl font-bold text-teal-400 mb-4">ウェブデザイン</div>
+          <div class="text-4xl font-extrabold mb-4">¥90,000</div>
+          <ul class="text-gray-300 mb-6 space-y-2">
+            <li>✅ モダンでレスポンシブなUI</li>
+            <li>✅ 最大5ページまで</li>
+            <li>✅ 30日間無料サポート</li>
+            <li>✅ 100%満足保証</li>
+          </ul>
+          <div
+            class="absolute top-0 right-0 bg-gradient-to-tr from-teal-400 to-teal-500 text-white px-3 py-1 rounded-bl-lg font-semibold">
+            おすすめ
+          </div>
+        </div>
+
+        <!-- Web Development -->
+        <div
+          class="pricing-card bg-gray-800 rounded-xl p-8 shadow-lg hover:scale-105 transition transform duration-300 relative overflow-hidden">
+          <div class="text-2xl font-bold text-teal-400 mb-4">ウェブ開発</div>
+          <div class="text-4xl font-extrabold mb-4">¥180,000</div>
+          <ul class="text-gray-300 mb-6 space-y-2">
+            <li>✅ フルスタック開発</li>
+            <li>✅ カスタムウェブアプリケーション</li>
+            <li>✅ 30日間無料サポート</li>
+            <li>✅ 100%満足保証</li>
+          </ul>
+        </div>
+
+        <!-- Data Analysis & Other Services -->
+        <div
+          class="pricing-card bg-gray-800 rounded-xl p-8 shadow-lg hover:scale-105 transition transform duration-300 relative overflow-hidden">
+          <div class="text-2xl font-bold text-teal-400 mb-4">データ分析 & その他</div>
+          <div class="text-4xl font-extrabold mb-4">¥75,000</div>
+          <ul class="text-gray-300 mb-6 space-y-2">
+            <li>✅ データ可視化とインサイト提供</li>
+            <li>✅ Python, Pandas, Matplotlib, Seaborn</li>
+            <li>✅ API開発</li>
+            <li>✅ 30日間無料サポート</li>
+          </ul>
+        </div>
+
+        <!-- E-commerce Development -->
+        <div
+          class="pricing-card bg-gray-800 rounded-xl p-8 shadow-lg hover:scale-105 transition transform duration-300 relative overflow-hidden">
+          <div class="text-2xl font-bold text-teal-400 mb-4">Eコマース開発</div>
+          <div class="text-4xl font-extrabold mb-4">¥150,000</div>
+          <ul class="text-gray-300 mb-6 space-y-2">
+            <li>✅ Shopify、WooCommerce、WordPressストア</li>
+            <li>✅ レスポンシブな商品ページ</li>
+            <li>✅ 決済ゲートウェイ統合</li>
+            <li>✅ 30日間無料サポート & 保証</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== GALLERY SECTION (Personal / Travel) ===== -->
+  <section id="gallery" class="py-16 bg-gray-900 text-white">
+    <div class="container mx-auto px-6">
+
+      <!-- Section Heading -->
+      <h2
+        class="text-3xl font-bold text-center mb-2 bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-purple-500">
+        旅のギャラリー
+      </h2>
+      <p class="text-center text-gray-400 mb-12">
+        旅行や冒険で撮影した瞬間たち
+      </p>
+
+      <!-- Gallery Grid: 1 / 2 / 3 / 4 per row -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+
+        <div class="relative overflow-hidden rounded-lg shadow-lg aspect-square">
+          <img src="gallary/cat-island.jpg" alt="Cat Island, Japan"
+            class="w-full h-full object-cover transform hover:scale-110 transition duration-300">
+        </div>
+
+        <div class="relative overflow-hidden rounded-lg shadow-lg aspect-square">
+          <img src="gallary/flower.jpg" alt="Flower Festival"
+            class="w-full h-full object-cover transform hover:scale-110 transition duration-300">
+        </div>
+
+        <div class="relative overflow-hidden rounded-lg shadow-lg aspect-square">
+          <img src="gallary/freinds-2.jpg" alt="Friends Outside"
+            class="w-full h-full object-cover transform hover:scale-110 transition duration-300">
+        </div>
+
+        <div class="relative overflow-hidden rounded-lg shadow-lg aspect-square">
+          <img src="gallary/friends.jpg" alt="Friends Outside"
+            class="w-full h-full object-cover transform hover:scale-110 transition duration-300">
+        </div>
+
+        <div class="relative overflow-hidden rounded-lg shadow-lg aspect-square">
+          <img src="gallary/fukuoka-2.jpg" alt="Fukuoka"
+            class="w-full h-full object-cover transform hover:scale-110 transition duration-300">
+        </div>
+
+        <div class="relative overflow-hidden rounded-lg shadow-lg aspect-square">
+          <img src="gallary/fukuoka-temple.jpg" alt="Fukuoka Shrine"
+            class="w-full h-full object-cover transform hover:scale-110 transition duration-300">
+        </div>
+
+        <div class="relative overflow-hidden rounded-lg shadow-lg aspect-square">
+          <img src="gallary/japan-science.jpg" alt="Japan Science Museum"
+            class="w-full h-full object-cover transform hover:scale-110 transition duration-300">
+        </div>
+
+        <div class="relative overflow-hidden rounded-lg shadow-lg aspect-square">
+          <img src="gallary/japan-village.jpg" alt="Japan Village"
+            class="w-full h-full object-cover transform hover:scale-110 transition duration-300">
+        </div>
+
+        <div class="relative overflow-hidden rounded-lg shadow-lg aspect-square">
+          <img src="gallary/japan.jpg" alt="Japan"
+            class="w-full h-full object-cover transform hover:scale-110 transition duration-300">
+        </div>
+
+        <div class="relative overflow-hidden rounded-lg shadow-lg aspect-square">
+          <img src="gallary/onga.jpg" alt="Onga River Japan"
+            class="w-full h-full object-cover transform hover:scale-110 transition duration-300">
+        </div>
+
+        <div class="relative overflow-hidden rounded-lg shadow-lg aspect-square">
+          <img src="gallary/sea-2.jpg" alt="Sea in Japan"
+            class="w-full h-full object-cover transform hover:scale-110 transition duration-300">
+        </div>
+
+        <div class="relative overflow-hidden rounded-lg shadow-lg aspect-square">
+          <img src="gallary/sea.jpg" alt="Sea in Japan"
+            class="w-full h-full object-cover transform hover:scale-110 transition duration-300">
+        </div>
+
+        <div class="relative overflow-hidden rounded-lg shadow-lg aspect-square">
+          <img src="gallary/sea-3.jpg" alt="Sea in Japan"
+            class="w-full h-full object-cover transform hover:scale-110 transition duration-300">
+        </div>
+
+        <div class="relative overflow-hidden rounded-lg shadow-lg aspect-square">
+          <img src="gallary/tokyo.jpg" alt="Tokyo"
+            class="w-full h-full object-cover transform hover:scale-110 transition duration-300">
+        </div>
+
+        <div class="relative overflow-hidden rounded-lg shadow-lg aspect-square">
+          <img src="gallary/tokyo.jpg" alt="Tokyo"
+            class="w-full h-full object-cover transform hover:scale-110 transition duration-300">
+        </div>
+
+        <div class="relative overflow-hidden rounded-lg shadow-lg aspect-square">
+          <img src="gallary/tokyo-2.jpg" alt="Tokyo"
+            class="w-full h-full object-cover transform hover:scale-110 transition duration-300">
+        </div>
+
+        <div class="relative overflow-hidden rounded-lg shadow-lg aspect-square">
+          <img src="gallary/tokyo-3.jpg" alt="Tokyo"
+            class="w-full h-full object-cover transform hover:scale-110 transition duration-300">
+        </div>
+
+        <div class="relative overflow-hidden rounded-lg shadow-lg aspect-square">
+          <img src="gallary/tokyo-match.jpg" alt="Tokyo Soccer Match"
+            class="w-full h-full object-cover transform hover:scale-110 transition duration-300">
+        </div>
+
+        <div class="relative overflow-hidden rounded-lg shadow-lg aspect-square">
+          <img src="gallary/ukk-uni.jpg" alt="University of Kitakyushu"
+            class="w-full h-full object-cover transform hover:scale-110 transition duration-300">
+        </div>
+
+        <div class="relative overflow-hidden rounded-lg shadow-lg aspect-square">
+          <img src="gallary/ukk-2.jpg" alt="University of Kitakyushu"
+            class="w-full h-full object-cover transform hover:scale-110 transition duration-300">
+        </div>
+
+        <div class="relative overflow-hidden rounded-lg shadow-lg aspect-square">
+          <img src="gallary/ukk-3.jpg" alt="University of Kitakyushu"
+            class="w-full h-full object-cover transform hover:scale-110 transition duration-300">
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section id="contact" class="py-16 bg-gray-900 text-white">
+    <div class="container mx-auto px-6 text-center">
+
+      <!-- Section Heading -->
+      <h2 class="text-3xl font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-purple-500">
+        つながりましょう
+      </h2>
+      <p class="text-gray-400 mb-12">
+        ソーシャルメディアでフォローするか、直接ご連絡ください
+      </p>
+
+      <!-- Email -->
+      <p class="text-gray-300 mb-8">
+        メール:
+        <a href="mailto:mohammadkamran1515@gmail.com" class="hover:text-teal-400 transition">
+          mohammadkamran1515@gmail.com
+        </a>
+      </p>
+
+      <!-- Social Media Links -->
+      <div class="flex justify-center gap-8 flex-wrap text-4xl">
+        <a href="https://www.facebook.com/being.m.kamran/" target="_blank"
+          class="text-gray-300 hover:text-teal-400 transition transform hover:scale-110">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://x.com/being_m_kamran" target="_blank"
+          class="text-gray-300 hover:text-teal-400 transition transform hover:scale-110">
+          <i class="fab fa-x-twitter"></i>
+        </a>
+        <a href="https://www.pinterest.com/mohkamran539/" target="_blank"
+          class="text-gray-300 hover:text-teal-400 transition transform hover:scale-110">
+          <i class="fab fa-pinterest-p"></i>
+        </a>
+        <a href="https://instagram.com/being_m_kamran" target="_blank"
+          class="text-gray-300 hover:text-teal-400 transition transform hover:scale-110">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://github.com/mohakamran" target="_blank"
+          class="text-gray-300 hover:text-teal-400 transition transform hover:scale-110">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://tiktok.com/@mohammad_kamran_" target="_blank"
+          class="text-gray-300 hover:text-teal-400 transition transform hover:scale-110">
+          <i class="fab fa-tiktok"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/mokamran/" target="_blank"
+          class="text-gray-300 hover:text-teal-400 transition transform hover:scale-110">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://www.youtube.com/@muhkamran1034" target="_blank"
+          class="text-gray-300 hover:text-teal-400 transition transform hover:scale-110">
+          <i class="fab fa-youtube"></i>
+        </a>
+      </div>
+
+      <p class="mt-8 text-gray-500">
+        &copy; 2025 ムハンマド・カムラン. 全著作権所有.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- Language Switcher -->
+  <!-- Language Switcher -->
+  <div class="fixed left-4 bottom-4 z-[9999]">
+    <!-- Button -->
+    <button id="langBtn"
+      class="flex items-center justify-between space-x-2 bg-white rounded-lg shadow-lg px-3 py-2 hover:bg-gray-100 transition w-32">
+      <div class="flex items-center space-x-2">
+        <!-- Japanese flag -->
+        <div class="w-6 h-4 rounded-sm border overflow-hidden">
+          <img src="https://cdn.jsdelivr.net/npm/flag-icons@7.5.0/flags/4x3/us.svg" alt="US Flag"
+            class="w-full h-full object-cover">
+        </div>
+        <span class="text-sm text-black font-medium">English</span>
+      </div>
+      <!-- Toggle icon -->
+      <i id="langIcon" class="fas fa-chevron-up text-gray-600"></i>
+    </button>
+
+    <!-- Dropdown -->
+    <div id="langDropdown" class="mt-2 hidden flex-col bg-white rounded-lg shadow-lg w-32">
+      <!-- English Option -->
+      <a href="index.html" class="flex items-center space-x-2 px-3 py-2 hover:bg-gray-100 transition">
+        <div class="w-6 h-4 rounded-sm border overflow-hidden">
+          <img src="https://cdn.jsdelivr.net/npm/flag-icons@7.5.0/flags/4x3/us.svg" alt="US Flag"
+            class="w-full h-full object-cover">
+        </div>
+        <span class="text-sm text-black font-medium">English</span>
+      </a>
+
+      <!-- Japanese Option -->
+      <a href="javascript:void()" class="flex items-center space-x-2 px-3 py-2 hover:bg-gray-100 transition">
+        <div class="w-6 h-4 rounded-sm border overflow-hidden">
+          <img src="https://cdn.jsdelivr.net/npm/flag-icons@7.5.0/flags/4x3/jp.svg" alt="Japanese Flag"
+            class="w-full h-full object-cover">
+        </div>
+        <span class="text-sm text-black font-medium">日本語</span>
+      </a>
+    </div>
+  </div>
+
+  
+
+  <script>
+    const langBtn = document.getElementById('langBtn');
+    const langDropdown = document.getElementById('langDropdown');
+    const langIcon = document.getElementById('langIcon');
+
+    langBtn.addEventListener('click', () => {
+      langDropdown.classList.toggle('hidden');
+      langIcon.classList.toggle('fa-chevron-down');
+      langIcon.classList.toggle('fa-chevron-up');
+    });
+
+    // Close dropdown if clicked outside
+    document.addEventListener('click', (e) => {
+      if (!langBtn.contains(e.target) && !langDropdown.contains(e.target)) {
+        langDropdown.classList.add('hidden');
+        langIcon.classList.add('fa-chevron-down');
+        langIcon.classList.remove('fa-chevron-up');
+      }
+    });
+  </script>
+
+  <!-- Add Font Awesome CDN in your head -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- ===== SCRIPTS ===== -->
+  <script>
+    // Typing effect
+    const roles = [
+      "PHP開発者",       // PHP Developer
+      "Python開発者",    // Python Developer
+      "Shopify開発者",   // Shopify Developer
+      "WordPress開発者", // WordPress
+      "React開発者"      // React Developer
+    ];
+
+    let roleIndex = 0, charIndex = 0, isDeleting = false;
+    const typewriter = document.getElementById("typewriter");
+
+    function typeEffect() {
+      let fullText = roles[roleIndex];
+      if (isDeleting) {
+        charIndex--;
+        typewriter.textContent = fullText.substring(0, charIndex);
+      } else {
+        charIndex++;
+        typewriter.textContent = fullText.substring(0, charIndex);
+      }
+
+      if (!isDeleting && charIndex === fullText.length) {
+        isDeleting = true;
+        setTimeout(typeEffect, 1500);
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        roleIndex = (roleIndex + 1) % roles.length;
+        setTimeout(typeEffect, 200);
+      } else {
+        setTimeout(typeEffect, isDeleting ? 80 : 120);
+      }
+    }
+    typeEffect();
+
+    // Mobile Menu Toggle
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+    menuToggle.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  </script>
+</body>
+
+</html>
