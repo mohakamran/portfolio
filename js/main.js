@@ -5,6 +5,8 @@ import { initLanguageSwitcher } from './components/language-switcher.js';
 import { initParticles } from './components/particles.js';
 import { initTypewriter } from './components/typewriter.js';
 
+import "./index.js";
+
 // Load all components when DOM is ready
 document.addEventListener('DOMContentLoaded', async () => {
     try {
