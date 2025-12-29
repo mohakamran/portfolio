@@ -1092,6 +1092,7 @@ class LanguageManager {
                 'project-ai': 'AI tools SAAS website',
                 'project-atoms': 'Interactive 3D Atom Simulator',
                 'project-def': 'Galactic Defender',
+                'project-digizone': 'Digizone',
 
                 // Project Descriptions
                 'project-windows-11-desc': 'Browser-based simulation of the Windows 11 desktop environment',
@@ -1100,6 +1101,7 @@ class LanguageManager {
                 'project-ai-desc': 'A website for AI tools Marketing page',
                 'project-atoms-desc': 'The Bohr atomic model in interactive 3D using HTML, Tailwind CSS, and Three.js.',
                 'project-def-desc': 'Classic-style 2D vertical space shooter built using pure HTML, CSS, and JavaScript.',
+                'project-digizone-desc': 'Ecommerce Services Startup Website',
 
                 // Portfolio CTA
                 'portfolio-cta': 'Want to See More? Let\'s Talk',
@@ -1277,6 +1279,8 @@ class LanguageManager {
                 'project-ai': 'AIツールSaaSウェブサイト',
                 'project-atoms': 'インタラクティブ3D原子シミュレーター',
                 'project-def': 'ギャラクティックディフェンダー',
+                'project-digizone': 'Digizone',
+                'project-digizone-desc': 'Eコマースサービス スタートアップウェブサイト',
 
                 // Project Descriptions
                 'project-windows-11-desc': 'ブラウザで体験できるWindows 11デスクトップ環境のシミュレーション',
@@ -1284,12 +1288,7 @@ class LanguageManager {
                 'project-travelx-desc': '旅行代理店のウェブサイト',
                 'project-ai-desc': 'AIツールのマーケティングページ用ウェブサイト',
                 'project-atoms-desc': 'HTML、Tailwind CSS、Three.jsでボーアの原子モデルをインタラクティブに体験できます。',
-                'project-def-desc': 'HTML、CSS、JavaScriptで構築したクラシックな2D縦スクロールシューティングゲーム。',
-                'project-invoice-desc': 'インボイスジェネレーター',
-                'project-sentiment-desc': 'AIツール',
-                'project-estores-desc': 'ビジネスウェブサイト',
-                'project-digits-desc': 'ビジネスウェブサイト',
-                'project-expert-desc': 'ビジネスウェブサイト',
+                'project-def-desc': 'HTML、CSS、JavaScriptで構築したクラシックな2D縦スクロールシューティングゲーム.',
                 'project-unique-desc': 'ウェブホスティング会社のウェブサイト',
                 'project-zoobounty-desc': 'オンラインショッピングサイト',
                 'project-travel-desc': '旅行代理店のウェブサイト',
@@ -1467,8 +1466,8 @@ class LanguageManager {
     }
 
     loadSavedLanguage() {
-        // Default to Japanese instead of English
-        const savedLang = localStorage.getItem('preferred-language') || 'jp';
+        // Default to English first, then check for saved preference
+        const savedLang = localStorage.getItem('preferred-language') || 'en';
         this.switchLanguage(savedLang, false);
         console.log('Loaded language:', savedLang);
     }
@@ -1476,94 +1475,113 @@ class LanguageManager {
     switchLanguage(lang, save = true) {
         if (this.currentLang === lang) return;
 
+        console.log(`Switching to ${lang} from ${this.currentLang}`);
         this.currentLang = lang;
 
-        // Update active button states
-        this.updateButtonStates(lang);
+        try {
+            // Update all text content first
+            this.updateContent(lang);
+            
+            // Then update button states
+            this.updateButtonStates(lang);
 
-        // Update all text content
-        this.updateContent(lang);
-
-        // Save preference
-        if (save) {
-            localStorage.setItem('preferred-language', lang);
+            // Save preference
+            if (save) {
+                localStorage.setItem('preferred-language', lang);
+            }
+            
+            console.log(`Successfully switched to ${lang}`);
+        } catch (error) {
+            console.error('Error switching language:', error);
         }
-
-        console.log(`Language switched to: ${lang}`);
     }
 
-updateButtonStates(lang) {
-    console.log('Updating button states for language:', lang);
+    updateButtonStates(lang) {
+        console.log('Updating button states for language:', lang);
 
-    // Desktop buttons
-    const enBtn = document.getElementById('lang-en');
-    const jpBtn = document.getElementById('lang-jp');
+        // Desktop buttons
+        const enBtn = document.getElementById('lang-en');
+        const jpBtn = document.getElementById('lang-jp');
 
-    // Mobile buttons
-    const enBtnMobile = document.getElementById('lang-en-mobile');
-    const jpBtnMobile = document.getElementById('lang-jp-mobile');
+        // Mobile buttons
+        const enBtnMobile = document.getElementById('lang-en-mobile');
+        const jpBtnMobile = document.getElementById('lang-jp-mobile');
 
-    // Remove active styles from ALL buttons first
-    [enBtn, jpBtn, enBtnMobile, jpBtnMobile].forEach(btn => {
-        if (btn) {
-            // Remove all possible active styles
-            btn.classList.remove(
-                'bg-gradient-to-r', 'from-teal-500', 'to-cyan-500',
-                'text-white', 'border-teal-500/30',
-                'bg-teal-500', 'bg-cyan-500'
-            );
+        // Remove active styles from ALL buttons first
+        [enBtn, jpBtn, enBtnMobile, jpBtnMobile].forEach(btn => {
+            if (btn) {
+                // Remove all possible active styles
+                btn.classList.remove(
+                    'bg-gradient-to-r', 'from-teal-500', 'to-cyan-500',
+                    'text-white', 'border-teal-500/30',
+                    'bg-teal-500', 'bg-cyan-500', 'bg-gray-800', 'text-gray-300', 'border-gray-600',
+                    'glass'
+                );
 
-            // Add inactive styles - handle desktop vs mobile differently
-            if (btn === enBtnMobile || btn === jpBtnMobile) {
-                // Mobile buttons
-                btn.classList.remove('text-white');
-                btn.classList.add('glass', 'text-gray-300');
-            } else {
-                // Desktop buttons
-                btn.classList.remove('text-white');
-                btn.classList.add('bg-gray-800', 'text-gray-300', 'border-gray-600');
+                // Add base styles
+                if (btn === enBtnMobile || btn === jpBtnMobile) {
+                    // Mobile buttons - default to glass style
+                    btn.classList.add('glass', 'text-gray-300');
+                } else {
+                    // Desktop buttons - default to dark style
+                    btn.classList.add('bg-gray-800', 'text-gray-300', 'border-gray-600');
+                }
+            }
+        });
+
+        // Apply active styles to the correct button based on language
+        if (lang === 'en') {
+            // Activate English buttons
+            if (enBtn) {
+                enBtn.classList.remove('bg-gray-800', 'text-gray-300', 'border-gray-600');
+                enBtn.classList.add('bg-gradient-to-r', 'from-teal-500', 'to-cyan-500', 'text-white', 'border-teal-500/30');
+            }
+            if (enBtnMobile) {
+                enBtnMobile.classList.remove('glass', 'text-gray-300');
+                enBtnMobile.classList.add('bg-gradient-to-r', 'from-teal-500', 'to-cyan-500', 'text-white');
+            }
+        } else {
+            // Activate Japanese buttons  
+            if (jpBtn) {
+                jpBtn.classList.remove('bg-gray-800', 'text-gray-300', 'border-gray-600');
+                jpBtn.classList.add('bg-gradient-to-r', 'from-teal-500', 'to-cyan-500', 'text-white', 'border-teal-500/30');
+            }
+            if (jpBtnMobile) {
+                jpBtnMobile.classList.remove('glass', 'text-gray-300');
+                jpBtnMobile.classList.add('bg-gradient-to-r', 'from-teal-500', 'to-cyan-500', 'text-white');
             }
         }
-    });
 
-    // Apply active styles to the correct button based on language
-    if (lang === 'en') {
-        // Activate English buttons
-        if (enBtn) {
-            enBtn.classList.remove('bg-gray-800', 'text-gray-300', 'border-gray-600');
-            enBtn.classList.add('bg-gradient-to-r', 'from-teal-500', 'to-cyan-500', 'text-white', 'border-teal-500/30');
-        }
-        if (enBtnMobile) {
-            enBtnMobile.classList.remove('glass', 'text-gray-300');
-            enBtnMobile.classList.add('bg-gradient-to-r', 'from-teal-500', 'to-cyan-500', 'text-white');
-        }
-    } else {
-        // Activate Japanese buttons  
-        if (jpBtn) {
-            jpBtn.classList.remove('bg-gray-800', 'text-gray-300', 'border-gray-600');
-            jpBtn.classList.add('bg-gradient-to-r', 'from-teal-500', 'to-cyan-500', 'text-white', 'border-teal-500/30');
-        }
-        if (jpBtnMobile) {
-            jpBtnMobile.classList.remove('glass', 'text-gray-300');
-            jpBtnMobile.classList.add('bg-gradient-to-r', 'from-teal-500', 'to-cyan-500', 'text-white');
-        }
+        console.log('Button states updated. Active language:', lang);
     }
 
-    console.log('Button states updated. Active language:', lang);
-}
-
     updateContent(lang) {
+        console.log(`Updating content to ${lang}`);
         const translations = this.translations[lang];
+        
+        if (!translations) {
+            console.error(`No translations found for language: ${lang}`);
+            return;
+        }
 
         // Update all elements with data-i18n attribute
-        document.querySelectorAll('[data-i18n]').forEach(element => {
+        const elements = document.querySelectorAll('[data-i18n]');
+        console.log(`Found ${elements.length} elements to translate`);
+        
+        elements.forEach(element => {
             const key = element.getAttribute('data-i18n');
-            if (translations[key]) {
-                if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
-                    element.placeholder = translations[key];
-                } else {
-                    element.textContent = translations[key];
+            if (translations[key] !== undefined) {
+                try {
+                    if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                        element.placeholder = translations[key];
+                    } else {
+                        element.textContent = translations[key];
+                    }
+                } catch (error) {
+                    console.error(`Error updating element with key '${key}':`, error);
                 }
+            } else {
+                console.warn(`No translation found for key: ${key}`);
             }
         });
 
@@ -1571,9 +1589,20 @@ updateButtonStates(lang) {
         document.title = lang === 'en'
             ? 'Muhammad Kamran - Full Stack Developer & AI Enthusiast'
             : 'ムハンマド・カムラン - フルスタック開発者 & AI 愛好家';
+            
+        console.log(`Content updated to ${lang}`);
     }
 }
 
-
 // ===== INITIALIZE LANGUAGE MANAGER =====
-const languageManager = new LanguageManager();
+let languageManager;
+
+document.addEventListener('DOMContentLoaded', () => {
+    languageManager = new LanguageManager();
+    
+    // Force update content after a short delay to ensure all elements are loaded
+    setTimeout(() => {
+        languageManager.updateContent(languageManager.currentLang);
+        languageManager.updateButtonStates(languageManager.currentLang);
+    }, 100);
+});
